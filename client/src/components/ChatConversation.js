@@ -2,7 +2,7 @@ import {User, Bot, Send} from "lucide-react";
 import {useRef, useEffect} from "react";
 
 // 공통 대화 UI
-export function ChatConversation({messages, onSendMessage, inputValue, setInputValue}) {
+export function ChatConversation({messages, onSendMessage, inputValue, setInputValue, disabled = false}) {
     const scrollRef = useRef(null);
     const inputRef = useRef(null);
 
@@ -68,13 +68,14 @@ export function ChatConversation({messages, onSendMessage, inputValue, setInputV
                         className="flex-1 resize-none bg-transparent rounded-xl px-4 py-3 text-base text-gray-900 outline-none border-none focus:ring-0"
                         placeholder="메시지를 입력하세요..."
                         value={inputValue}
+                        disabled={disabled}
                         onChange={handleChange}
                         style={{minHeight: "40px", maxHeight: "200px", overflow: "auto"}}
                     />
                     <button
                         type="submit"
                         disabled={!inputValue.trim()}
-                        className="flex items-center justify-center p-2 rounded-full bg-green-600 hover:bg-green-700 transition text-white shadow disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex items-center justify-center p-2 rounded-full bg-green-600 enabled:hover:bg-green-700 transition text-white shadow disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         <Send size={18}/>
                     </button>

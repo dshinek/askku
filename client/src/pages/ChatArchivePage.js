@@ -116,7 +116,7 @@ export default function ChatArchivePage() {
                                 {currentItems.map(item => (
                                     <button
                                         key={item.id}
-                                        onClick={() => navigate(`/archived/${item.id}`)}
+                                        onClick={() => navigate(`/archived-chat/${item.title}`)}
                                         className="group flex items-center gap-3 w-full bg-gray-100 hover:bg-green-50 active:scale-[0.98] rounded-2xl px-5 py-6 text-lg font-semibold text-gray-800 shadow-sm border border-gray-200 hover:border-green-400 transition-all duration-200"
                                         style={{
                                             boxShadow: "0 2px 8px 0 rgba(30,41,59,.05)",

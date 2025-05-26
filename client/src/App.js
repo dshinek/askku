@@ -28,8 +28,8 @@ function App() {
                 <Route path="/shared-chats" element={<SharedChatPage/>}/>
                 <Route path="/document" element={<DocumentPage/>}/>
                 <Route path="/archive" element={<ChatArchivePage/>}/>
-                <Route path="/archived/:id" element={<ArchiveChat/>}/>
-                <Route path="/shared/:id" element={<SharedChat/>}/>
+                <Route path="/archived-chat/:slug" element={<ArchiveChat/>}/>
+                <Route path="/shared-chat/:slug" element={<SharedChat/>}/>
             </Routes>
         </Router>
     );

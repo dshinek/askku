@@ -199,6 +199,14 @@ export const sharedItems = [
         title: "졸업 프로젝트 공유",
         conversation: [
             { type: "user_message", message: "프로젝트 주제 뭐임?", message_id: 1 },
+            { type: "ai_message", message: "AI 기반 자동 요약입니다.", message_id: 2 },
+            { type: "user_message", message: "프로젝트 주제 뭐임?", message_id: 1 },
+            { type: "ai_message", message: "AI 기반 자동 요약입니다.", message_id: 2 },
+            { type: "user_message", message: "프로젝트 주제 뭐임?", message_id: 1 },
+            { type: "ai_message", message: "AI 기반 자동 요약입니다.", message_id: 2 },
+            { type: "user_message", message: "프로젝트 주제 뭐임?", message_id: 1 },
+            { type: "ai_message", message: "AI 기반 자동 요약입니다.", message_id: 2 },
+            { type: "user_message", message: "프로젝트 주제 뭐임?", message_id: 1 },
             { type: "ai_message", message: "AI 기반 자동 요약입니다.", message_id: 2 }
         ]
     },

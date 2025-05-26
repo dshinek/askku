@@ -6,10 +6,10 @@ import {ArrowLeft} from "lucide-react";
 import MainLayout from "./layout/MainLayout";
 
 export default function SharedChat() {
-    const {id} = useParams();
+    const {slug} = useParams();
     const navigate = useNavigate();
 
-    const shared = sharedItems.find(item => String(item.id) === String(id));
+    const shared = sharedItems.find(item => String(item.title) === String(slug));
     const [messages, setMessages] = useState(shared ? shared.conversation : []);
     const [input, setInput] = useState("");
 
@@ -29,24 +29,13 @@ export default function SharedChat() {
 
     return (
         <MainLayout>
-            <div className="h-full flex flex-col">
-                <div className="w-full mx-auto flex-1 flex items-center gap-4 pt-8 pb-2">
-                    <button
-                        onClick={() => navigate(-1)}
-                        className="rounded-full p-2 hover:bg-gray-100 transition"
-                        aria-label="뒤로가기"
-                    >
-                        <ArrowLeft className="w-6 h-6"/>
-                    </button>
-                    <h3 className="text-xl font-bold">{shared.title}</h3>
-                </div>
-                <ChatConversation
-                    messages={messages}
-                    onSendMessage={onSendMessage}
-                    inputValue={input}
-                    setInputValue={setInput}
-                />
-            </div>
+            <ChatConversation
+                messages={messages}
+                onSendMessage={onSendMessage}
+                inputValue={input}
+                setInputValue={setInput}
+                disabled={true}
+            />
         </MainLayout>
     );
 }
