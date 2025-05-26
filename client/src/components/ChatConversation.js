@@ -65,8 +65,8 @@ export function ChatConversation({messages, onSendMessage, inputValue, setInputV
                     <textarea
                         ref={inputRef}
                         rows={1}
-                        className="flex-1 resize-none bg-transparent rounded-xl px-4 py-3 text-base text-gray-900 outline-none border-none focus:ring-0"
-                        placeholder="메시지를 입력하세요..."
+                        className="disabled:placeholder:text-red-400 flex-1 resize-none bg-transparent rounded-xl px-4 py-3 text-base text-gray-900 outline-none border-none focus:ring-0"
+                        placeholder={disabled ? "공유된 챗은 메시지를 입력할 수 없습니다." : "메시지를 입력하세요..."}
                         value={inputValue}
                         disabled={disabled}
                         onChange={handleChange}
