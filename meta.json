@@ -1,0 +1,22 @@
+[
+  {
+    "type": "user_message",
+    "message": "shit software engineering",
+    "message_id": 1
+  },
+  {
+    "type": "ai_message",
+    "message": "I agree",
+    "message_id": 2
+  },
+  {
+    "type": "user_message",
+    "message": "why do I learn software engineering",
+    "message_id": 3
+  },
+  {
+    "type": "ai_message",
+    "message": "lets drop",
+    "message_id": 4
+  }
+]

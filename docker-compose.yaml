@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant
+    ports:
+      - "6333:6333"    
+    volumes:
+      - /Users/been/Desktop/beenstudio/sandbox/poc_for_askku/qdrant_storage:/qdrant/storage
+    restart: unless-stopped
+
