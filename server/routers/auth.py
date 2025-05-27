@@ -7,14 +7,15 @@ import redis
 import uuid
 from dependencies.session_auth import check_authentication_header
 
-CACHE_SERVER_HOST = os.environ.get("REDIS_SERVER_HOST")
-CACHE_SERVER_PORT = os.environ.get("REDIS_SERVER_PORT")
-rd = redis.Redis(host=CACHE_SERVER_HOST, port=int(CACHE_SERVER_PORT), db=0)
+rd = redis.Redis(host="127.0.0.1", port=int("6380"), db=0)
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/api/users",
+    tags=["users"]
+)
 
 @router.post("/signup")
-def signup(user: schema.UserCreate, db: Session = Depends(get_db)):
+def signup(user: schema.UserBase, db: Session = Depends(get_db)):
     db_user = crud.create_user(db, user)
     if not db_user:
         raise HTTPException(status_code=400, detail="User already exists or invalid data")
@@ -30,9 +31,9 @@ def login(user: schema.UserLogin, db: Session = Depends(get_db)):
     rd.set(session_token, db_user.id)
     return {"message": "login successfully","session_token": session_token}
 
-@router.get("/profile/{user_id}")
-def get_profile(user_id: str, db: Session = Depends(get_db), user_id_=Depends(check_authentication_header)):
-    db_user = crud.get_user_by_id(db, user_id)
+@router.get("/profile/me")
+def get_my_profile(db: Session = Depends(get_db), user_id=Depends(check_authentication_header)):
+    db_user = crud.get_user_by_id_(db, user_id)
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
     return {
@@ -43,8 +44,8 @@ def get_profile(user_id: str, db: Session = Depends(get_db), user_id_=Depends(ch
         "grade": db_user.grade
     }
 
-@router.put("/profile/{user_id}")
-def update_profile(user_id: str, profile: schema.UserProfile, db: Session = Depends(get_db), user_id_=Depends(check_authentication_header)):
+@router.put("/profile/me")
+def update_my_profile(profile: schema.UserProfileUpdate, db: Session = Depends(get_db), user_id=Depends(check_authentication_header)):
     db_user = crud.update_user_profile(db, user_id, profile)
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")

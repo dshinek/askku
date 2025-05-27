@@ -1,49 +1,66 @@
-import {useState} from "react";
-import {ChatConversation} from "../components/ChatConversation";
+import { useState } from "react";
+import { ChatConversation } from "../components/ChatConversation";
 import MainLayout from "../components/layout/MainLayout";
+import { createChat, createMessage } from "../utils/api";
+
+ // Helper to get session_id (adjust if you use a different auth system)
+function getSessionId() {
+    return localStorage.getItem("session_id");
+}
 
 export default function NewChatPage() {
-    const [messages, setMessages] = useState([
-        // {
-        //     "type": "user_message",
-        //     "message": "shit software engineering",
-        //     "message_id": 1
-        // },
-        // {
-        //     "type": "ai_message",
-        //     "message": "I agree",
-        //     "message_id": 2
-        // },
-        // {
-        //     "type": "user_message",
-        //     "message": "why do I learn software engineering",
-        //     "message_id": 3
-        // },
-        // {
-        //     "type": "ai_message",
-        //     "message": "lets drop",
-        //     "message_id": 4
-        // }
-    ]);
+    const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
+    const [chatId, setChatId] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-    const onSend = () => {
+    const onSend = async () => {
         const content = input.trim();
-        if (!content) return;
-        setMessages(prev => [
-            ...prev,
-            {
-                type: "user_message",
-                message: content,
-                message_id: prev.length + 1
-            },
-            {
-                type: "ai_message",
-                message: `Echo: ${content}`,
-                message_id: prev.length + 2
+        if (!content || loading) return;
+        setLoading(true);
+
+        try {
+            let currentChatId = chatId;
+            // If no chatId, create a new chat first
+            if (!currentChatId) {
+                const chatRes = await createChat(getSessionId());
+                currentChatId = chatRes.chat_id;
+                setChatId(currentChatId);
             }
-        ]);
-        setInput("");
+
+            // Add user message immediately
+            setMessages(prev => [
+                ...prev,
+                {
+                    type: "user_message",
+                    message: content,
+                    message_id: prev.length + 1
+                }
+            ]);
+            setInput("");
+
+            // Send message to server
+            const msgRes = await createMessage(currentChatId, content, getSessionId());
+            setMessages(prev => [
+                ...prev,
+                {
+                    type: "ai_message",
+                    message: msgRes.llm_response,
+                    message_id: prev.length + 2
+                }
+            ]);
+        } catch (err) {
+            setMessages(prev => [
+                ...prev,
+                {
+                    type: "ai_message",
+                    message: "Error: 메시지 전송 실패",
+                    message_id: prev.length + 2
+                }
+            ]);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -53,6 +70,7 @@ export default function NewChatPage() {
                 onSendMessage={onSend}
                 inputValue={input}
                 setInputValue={setInput}
+                loading={loading}
             />
         </MainLayout>
     );

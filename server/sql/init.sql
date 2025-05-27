@@ -9,10 +9,10 @@ CREATE TABLE users (
 );
 
 CREATE TABLE docs (
-    doc_name INTEGER NOT NULL PRIMARY KEY,
+    doc_id SERIAL PRIMARY KEY,
     doc_name VARCHAR(255) NOT NULL,
     doc_content TEXT NOT NULL,
-    doc_thumbnail TEXT  -- URL or base64 or path, depending on storage strategy
+    doc_thumbnail TEXT  -- URL or base64 or path
 );
 
 CREATE TABLE chats (

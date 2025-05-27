@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import LoginForm from '../components/auth/LoginForm';
 import {useSetRecoilState} from "recoil";
 import {sessionIdState} from "../utils/authState";
+import { signIn } from "../utils/api";
 
 
 const LoginPage = () => {
@@ -13,20 +14,17 @@ const LoginPage = () => {
     const handleLogin = async (email, password) => {
         setError(null);
         try {
-            // const response = await signIn(email, password);
-            // const sessionId = response.session_id;
-            // if (!sessionId) {
-            //     setError("세션 정보가 없습니다.");
-            //     return;
-            // }
-            // setSessionId(sessionId);
-            const sessionId = "1234";
-            setSessionId(sessionId);
-            localStorage.setItem("session_id", sessionId);
+            const response = await signIn(email, password);
+            const sessionToken = response.session_token;
+            if (!sessionToken) {
+                setError("세션 정보가 없습니다.");
+                return;
+            }
+            setSessionId(sessionToken);
+            localStorage.setItem("session_id", sessionToken);
+            navigate("/");
         } catch (err) {
             setError('로그인에 실패했습니다. 이메일 또는 비밀번호를 확인해주세요.');
-        } finally {
-            navigate("/")
         }
     };
     return (

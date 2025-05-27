@@ -8,12 +8,21 @@ class UserBase(BaseModel):
     student_id: str
     department: str
     grade: int
-
-class UserCreate(UserBase):
     user_pw: str
 
-class UserRead(UserBase):
-    id: int
+class UserProfileUpdate(BaseModel):
+    name: str
+    student_id: str
+    department: str
+    grade: int
+
+class UserCreate(UserBase):
+    user_id: str
+    name: str
+    student_id: str
+    department: str
+    grade: int
+    user_pw: str
 
 class UserLogin(BaseModel):
     user_id: str
@@ -30,7 +39,11 @@ class DocRead(DocBase):
 
 # Message Schemas
 class MessageBase(BaseModel):
-    source: str  # 'AI' or 'Human'
+    source: str
+    content: str
+    ref_doc_id: Optional[int] = None
+
+class MessageCreate(BaseModel):
     content: str
     ref_doc_id: Optional[int] = None
 

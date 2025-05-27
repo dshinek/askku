@@ -15,11 +15,11 @@ app.add_middleware(
 
 # Include routers if available
 if auth:
-    app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+    app.include_router(auth.router)
 if chat:
-    app.include_router(chat.router, prefix="/chat", tags=["Chat"])
+    app.include_router(chat.router)
 if document:
-    app.include_router(document.router, prefix="/document", tags=["Document"])
+    app.include_router(document.router)
 
 @app.get("/")
 def read_root():

@@ -32,6 +32,8 @@ def get_reference(question):
     )
 
     for result in query_result:
+        # if result.score < 0.7:
+        #     continue
         string += result.payload["text"]
         string += "\n"
         reference_list.append(str(result.id) + "page")
@@ -50,4 +52,14 @@ def answer(question):
                             {"role": "user", "content": question}],
                 temperature=0.3)
     
-    return response.choices[0].message.content + "\n" + "이 답변은 다음 문서를 참고하여 작성되었습니다. " + str(relative_doc_list)
+    return response.choices[0].message.content #+ "\n" + "이 답변은 다음 문서를 참고하여 작성되었습니다. " + str(relative_doc_list)
+
+def chat_summary(string):
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "system", "content": "You are a helpful assistant that summarizing chat."},\
+                  {"role": "user", "content": "아래 문자는 채팅 로그야 내용을 한국어로 요약해줘 반드시, 그리고 요약은 10글자 이내로 해줘."},
+                  {"role": "user", "content": string}],
+        temperature=0.3
+    )
+    return response.choices[0].message.content

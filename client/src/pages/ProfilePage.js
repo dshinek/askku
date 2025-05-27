@@ -1,23 +1,50 @@
-import React, {useState, useRef} from "react";
-import {PencilLine, Check, X, Camera} from "lucide-react";
+import React, { useState, useRef, useEffect } from "react";
+import { useRecoilValue } from "recoil";
+import { PencilLine, Check, X, Camera } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+import { sessionIdState } from "../utils/authState";
+import { getMyProfile, updateMyProfile } from "../utils/api";
 
 export default function ProfilePage() {
+    const sessionId = useRecoilValue(sessionIdState);
     const [profile, setProfile] = useState({
-        name: "김현빈",
-        studentId: "20",
-        major: "소프트웨어학과",
-        year: "4학년",
+        name: "",
+        studentId: "",
+        major: "",
+        year: "",
         avatar: null,
     });
-
     const [editMode, setEditMode] = useState(false);
     const [form, setForm] = useState(profile);
 
     const fileInputRef = useRef();
 
+    useEffect(() => {
+        if (!sessionId) return;
+        getMyProfile(sessionId)
+            .then(data => {
+                setProfile({
+                    name: data.name || "",
+                    studentId: data.student_id || "",
+                    major: data.department || "",
+                    year: data.grade || "",
+                    avatar: null,
+                });
+                setForm({
+                    name: data.name || "",
+                    studentId: data.student_id || "",
+                    major: data.department || "",
+                    year: data.grade || "",
+                    avatar: null,
+                });
+            })
+            .catch(err => {
+                // Optionally handle error
+            });
+    }, [sessionId]);
+
     const handleChange = (key, value) => {
-        setForm(f => ({...f, [key]: value}));
+        setForm(f => ({ ...f, [key]: value }));
     };
 
     const handleAvatarChange = (e) => {
@@ -25,14 +52,20 @@ export default function ProfilePage() {
         if (!file) return;
         const reader = new FileReader();
         reader.onload = (event) => {
-            setForm(f => ({...f, avatar: event.target.result}));
+            setForm(f => ({ ...f, avatar: event.target.result }));
         };
         reader.readAsDataURL(file);
     };
 
-    const handleSave = () => {
-        setProfile(form);
-        setEditMode(false);
+    const handleSave = async () => {
+        if (!sessionId) return;
+        try {
+            await updateMyProfile(form, sessionId);
+            setProfile(form);
+            setEditMode(false);
+        } catch (error) {
+            // Optionally handle error
+        }
     };
 
     const handleCancel = () => {

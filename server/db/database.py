@@ -10,7 +10,7 @@ POSTGRES_PORT = os.environ.get("POSTGRES_PORT")
 POSTGRES_DB = os.environ.get("POSTGRES_DB")
 
 SQLALCHEMY_DATABASE_URL = (
-    f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
+    f"postgresql://admin:admin@127.0.0.1:5432/db_server"
 )
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)

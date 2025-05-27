@@ -1,39 +1,50 @@
-import {useParams, useNavigate} from "react-router-dom";
-import {useState} from "react";
-import {sharedItems} from "./dummyData";
-import {ChatConversation} from "./ChatConversation";
-import {ArrowLeft} from "lucide-react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { ChatConversation } from "./ChatConversation";
 import MainLayout from "./layout/MainLayout";
+import { getChat } from "../utils/api";
+
+// Helper to get session_id
+function getSessionId() {
+    return localStorage.getItem("session_id");
+}
 
 export default function SharedChat() {
-    const {slug} = useParams();
-    const navigate = useNavigate();
+    const { slug } = useParams(); // slug is chat_id
+    const [chat, setChat] = useState(null);
+    const [messages, setMessages] = useState([]);
+    const [notFound, setNotFound] = useState(false);
 
-    const shared = sharedItems.find(item => String(item.title) === String(slug));
-    const [messages, setMessages] = useState(shared ? shared.conversation : []);
-    const [input, setInput] = useState("");
+    useEffect(() => {
+        if (!slug) return;
+        getChat(slug, getSessionId())
+            .then(data => {
+                setChat(data);
+                // Map backend messages to ChatConversation format
+                const mapped = (data.messages || []).map(m => ({
+                    type: m.source === "Human" ? "user_message" : "ai_message",
+                    message: m.content,
+                    message_id: m.message_id
+                }));
+                setMessages(mapped);
+                setNotFound(false);
+            })
+            .catch(err => {
+                setChat(null);
+                setMessages([]);
+                setNotFound(true);
+            });
+    }, [slug]);
 
-    const onSendMessage = () => {
-        const content = input.trim();
-        if (!content) return;
-        const nextId = (messages.at(-1)?.message_id || 0) + 1;
-        setMessages(prev => [
-            ...prev,
-            {type: "user_message", message: content, message_id: nextId},
-            {type: "ai_message", message: `Echo: ${content}`, message_id: nextId + 1}
-        ]);
-        setInput("");
-    };
-
-    if (!shared) return <div className="p-12">존재하지 않는 공유챗입니다.</div>;
+    if (notFound) return <div className="p-12">존재하지 않는 공유챗입니다.</div>;
 
     return (
         <MainLayout>
             <ChatConversation
                 messages={messages}
-                onSendMessage={onSendMessage}
-                inputValue={input}
-                setInputValue={setInput}
+                onSendMessage={() => {}}
+                inputValue={""}
+                setInputValue={() => {}}
                 disabled={true}
             />
         </MainLayout>

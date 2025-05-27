@@ -5,7 +5,10 @@ from typing import List, Optional
 from db.database import get_db
 from dependencies.session_auth import check_authentication_header
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/api/docs",
+    tags=["docs"]
+)
 
 @router.get("/{doc_id}")
 def get_document(doc_id: int, db: Session = Depends(get_db), user_id=Depends(check_authentication_header)):

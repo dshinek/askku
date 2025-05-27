@@ -1,9 +1,14 @@
-import React, {useState} from "react";
-import {ChevronsDown, MessageCircleMore, Search} from "lucide-react";
-import {AnimatePresence, motion} from "framer-motion";
-import {sharedItems} from "../components/dummyData";
-import {useNavigate} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { ChevronsDown, MessageCircleMore, Search } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
+import { getSharedChats } from "../utils/api";
+
+// Helper to get session_id
+function getSessionId() {
+    return localStorage.getItem("session_id");
+}
 
 export default function SharedChatPage() {
     const navigate = useNavigate();
@@ -12,14 +17,31 @@ export default function SharedChatPage() {
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(0);
     const [direction, setDirection] = useState(1);
+    const [sharedItems, setSharedItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchSharedChats() {
+            setLoading(true);
+            try {
+                const data = await getSharedChats(getSessionId());
+                setSharedItems(data);
+            } catch (err) {
+                setSharedItems([]);
+            } finally {
+                setLoading(false);
+            }
+        }
+        fetchSharedChats();
+    }, []);
 
     const trimmedSearch = search.trim();
     const filteredItems = trimmedSearch.length > 0
-        ? sharedItems.filter(item => item.title.toLowerCase().includes(trimmedSearch.toLowerCase()))
+        ? sharedItems.filter(item => item.chat_summary && item.chat_summary.toLowerCase().includes(trimmedSearch.toLowerCase()))
         : sharedItems;
 
     // 페이지 계산
-    const filteredTotalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+    const filteredTotalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE) || 1;
     const startIdx = page * ITEMS_PER_PAGE;
     const currentItems = filteredItems.slice(startIdx, startIdx + ITEMS_PER_PAGE);
 
@@ -70,7 +92,7 @@ export default function SharedChatPage() {
 
     const renderEmpty = () => (
         <div className="w-full flex justify-center items-center py-12 text-gray-400 text-lg font-medium">
-            검색 결과가 없습니다.
+            {loading ? "로딩 중..." : "검색 결과가 없습니다."}
         </div>
     );
 
@@ -120,8 +142,8 @@ export default function SharedChatPage() {
                             >
                                 {currentItems.map(item => (
                                     <button
-                                        key={item.id}
-                                        onClick={() => navigate(`/shared-chat/${item.title}`)}
+                                        key={item.chat_id}
+                                        onClick={() => navigate(`/shared-chat/${item.chat_id}`)}
                                         className="group flex items-center gap-3 w-full bg-gray-100 hover:bg-green-50 active:scale-[0.98] rounded-2xl px-5 py-6 text-lg font-semibold text-gray-800 shadow-sm border border-gray-200 hover:border-green-400 transition-all duration-200"
                                         style={{
                                             boxShadow: "0 2px 8px 0 rgba(30,41,59,.05)",
@@ -131,7 +153,7 @@ export default function SharedChatPage() {
                                         className="inline-flex items-center justify-center text-green-700 rounded-full w-9 h-9">
                                         <MessageCircleMore className="w-5 h-5"/>
                                     </span>
-                                        <span className="text-left break-keep">{item.title}</span>
+                                        <span className="text-left break-keep">{item.chat_summary || "No summary"}</span>
                                     </button>
                                 ))}
                                 {placeholders.map((_, idx) => (

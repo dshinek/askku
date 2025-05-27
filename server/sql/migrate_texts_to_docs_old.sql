@@ -1,4 +1,4 @@
--- SQL Migration Script
+-- Generated SQL for migrating text files to docs table
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (10, '학사제도 Pg. 10', '2. 2025학년도 수강신청 일정
 
 - 전자시간표 OPEN: 2025.1.27.(월)
@@ -34,7 +34,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (10, '학
 
 성균관대학교
 
-3', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/10.jpg');
+3', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (100, '학사제도 Pg. 100', '특별 프로그램 10
 
 - 해외 파견대학에서 수학한 학점을 본교에서 인정받게 됩니다.
@@ -65,7 +65,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (100, '�
   - 외국 파견대학에서 취득한 모든 교과목은 전공필수/전공선택/교양 포함) 및 일반선택 과목으로 인정 가능합니다. 단, 교환학생/해외수학생으로서 취득한 학점은 글로벌성적표 등에 표기된 성적으로 인정처리됩니다.
   - 파견대학에서 취득한 성적은 본교 성적표에 반영되지 않으며 교과목은 P/F 성적으로 인정처리됩니다. 취득한 성적이 본교에서 수강과목의 대체 및 등급 성적으로 인정받고자 하는 경우, 학과에 별도 문의 바랍니다. 단, 취득한 과목이 본교에서 필수선택인 P/F 성적 과목인 경우, 본교에 인정받는 것은 불가합니다.
 
-성균관대학교 93', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/100.jpg');
+성균관대학교 93', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (101, '학사제도 Pg. 101', '전공인정기준 및 학점변환 관련 세부사항은 소속 학과(또는 인정교과)하는 전공별로 일부 상이할 수 있으나, 추가적으로 자세한 사항은 해당 학사사무실 또는 소속 단과대학행정실을 통해 확인하시기 바랍니다.
 
 ※ 성적산출 관련 사항은 ''국외대학학점취득인정''항 참조
@@ -92,7 +92,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (101, '�
 
 94
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/101.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (102, '학사제도 Pg. 102', '특별 프로그램 10
 
 합니다.(GLS-신청/자격관리-교환/해외수학생신청-수학보고서 작성)
@@ -110,7 +110,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (102, '�
 - 수강 신청: 4월~5월 중 진행 ※ 정확한 일정은 추후 학교 홈페이지를 통해 공지 예정
 
 성균관대학교  
-95', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/102.jpg');
+95', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (103, '학사제도 Pg. 103', '```
 F A Q
 
@@ -132,7 +132,7 @@ A5 교환학생을 위한 장학금이 다양하게 준비되어 있습니다. �
 96
 
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/103.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (104, '학사제도 Pg. 104', '특별 프로그램 ❿
 
 Q6. 교내 장학금을 받고 있는데 교환학생/해외수학형으로 파견되어도 장학금을 계속해서 받을 수 있나요?
@@ -145,7 +145,7 @@ A6. 교내 장학금을 수혜하고 있는 학생의 경우 교환학생/해외
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 97
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/104.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (105, '학사제도 Pg. 105', '
 11. 다양한 교육과정 이수제도
 (복수전공 / 연계전공 / 정공심화트랙 / 융합트랙 / 마이크로디그리)
@@ -192,7 +192,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (105, '�
 - 2005~2013학년도 입학자 중 전공심화트랙 제도 운영 대상자로 지정된 학생은 복수전공 대신 전공심화트랙 이수해야 함
 
 - (2006~2012학년도 입학생) 전공심화트랙을 성실히 이수한 학생은 복수전공 이수로 인정 가능
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/105.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (106, '학사제도 Pg. 106', '다양한 교육과정 이수제도 11
 
 전공할 경우, 경영학과 경영학과 복수전공 이수과목으로 지정된 과목 중 영역별 최소 이수학점 이상을 이수해야 함)
@@ -220,7 +220,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (106, '�
 경운대학교
 KWANGWOON UNIVERSITY
 
-99', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/106.jpg');
+99', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (107, '학사제도 Pg. 107', '학업성적 평점평균 기준
 - 복수전공 신청 시기 등록한 모든 학기의 학업성적 평점평균(등급 포함)을 기준으로 합니다.
 - 유급한 학기의 등록학기 성적은 포함하지 않습니다.
@@ -241,7 +241,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (107, '�
 
 100
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/107.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (108, '학사제도 Pg. 108', '다양한 교육과정 이수제도 11
 
 F A Q
@@ -258,7 +258,7 @@ A3 네, 가능합니다. 단 복수전공에 선발되어 전공 이수 기준 �
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-101', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/108.jpg');
+101', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (109, '학사제도 Pg. 109', '연계전공
 
 - 연계전공 이수
@@ -287,7 +287,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (109, '�
 
 102
 
-출처: 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/109.jpg');
+출처: 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (11, '학사제도 Pg. 11', 'Sure, here is the transcribed text from the image:
 
 ---
@@ -320,7 +320,7 @@ Inspiring Future, Grand Challenge
 
 대학 · 대학원생을 위한 2025 학사제도 안내
 
----', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/11.jpg');
+---', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (110, '학사제도 Pg. 110', '다양한 교육과정 이수제도 11
 
 ※ 데이터사이언스연계전공, 인포매틱스연계전공 폐지(2019학년도부터)
@@ -351,7 +351,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (110, '�
 
 성균관대학교
 
-103', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/110.jpg');
+103', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (111, '학사제도 Pg. 111', '마이크로디그리
 
 - 간편하고 빠르게 합격을 취득하고 인정받는 새로운 교육환경 변화추세에 적극적으로 대응하고자 2022학년도부터 마이크로디그리 제도를 운영합니다.
@@ -384,7 +384,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (111, '�
 
 104
 
-대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/111.jpg');
+대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (112, '학사제도 Pg. 112', '다양한 교육과정 이수제도 11
 
 - 마이크로디그리 목록(학사과정)
@@ -423,7 +423,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (112, '�
 | 스마트 창치/제조 | 12 | 시스템경영공학과 | 031-290-7590 | |
 | 반도체/디스플레이 소재/소자 | 12 | 신소재공학과 | 031-290-7390 | |
 
-성균관대학교 105', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/112.jpg');
+성균관대학교 105', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (113, '학사제도 Pg. 113', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -453,7 +453,7 @@ Inspiring Future, Grand Challenge
 
 106
 대학 · 대학원을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/113.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (114, '학사제도 Pg. 114', '12. 글로벌융합학부 융합전공
 
 ■ 글로벌융합학부
@@ -480,7 +480,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (114, '�
 ※ 글로벌융합학부 선발 50명은 전공별 20명 이내 전공 중 택하여 2학년 진입
 
 성균관대학교  
-107', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/114.jpg');
+107', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (115, '학사제도 Pg. 115', '참고 사항
 - 글로벌융합학부 진입 신청은 대계열 학과진입 이전에 별도 공지 후 진행됩니다.
 - 대계열 학생의 경우 글로벌융합학부 진입과 대계열 학과진입을 동시에 신청할 수 있으나
@@ -519,7 +519,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (115, '�
 - 체계적인 교육과정 지원(기초/데이터관리/데이터분석/빅데이터/정보화)
 
 108 대학교육을 위한 2025 학사제도 안내
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/115.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (116, '학사제도 Pg. 116', '글로벌융합학부 융합전공 12
 
 - 캡스톤 프로젝트를 통한 실무·현장 교육
@@ -552,7 +552,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (116, '�
 * 학위명: 인공지능융합학사 (Bachelor of Applied Artificial Intelligence)
 * 학사연계 시 공학석사 수여
 
-성균관대학교 109', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/116.jpg');
+성균관대학교 109', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (117, '학사제도 Pg. 117', 'Inspiring Future, Grand Challenge
 
 • 이수학점
@@ -591,7 +591,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (117, '�
 
 110
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/117.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (118, '학사제도 Pg. 118', '
 자기설계융합전공
 
@@ -627,7 +627,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (118, '�
 
 - 공학사:
   나노바이오의공학, 데이터공학, 금융데이터공학, 스마트헬스케어공학, 환경스마트엔지니어링 등
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/118.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (119, '학사제도 Pg. 119', '13. 학사과정-대학원과정 연계
 
 ■ 학석사연계과정
@@ -658,7 +658,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (119, '�
 
 112
 
-대학·대학원을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/119.jpg');
+대학·대학원을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (12, '학사제도 Pg. 12', '```
 등 록 03
 
@@ -676,7 +676,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (12, '학
   - 석박사통합과정: 4년
   - 특수대학원 석사과정: 2년 6개월
   - 법학전문대학원: 3년
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/12.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (120, '학사제도 Pg. 120', '학사과정·대학원과정 연계 13
 
 - 특전
@@ -704,7 +704,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (120, '�
 
 ※ 본 안내 사항은 프로그램 운영계획에 따라 변동될 수 있으므로, 참여시 공지사항을 통해 세부내용 확인 바랍니다.
 
-성균관대학교 113', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/120.jpg');
+성균관대학교 113', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (121, '학사제도 Pg. 121', '학사과정 중 취득한 대학원 교과목의 대학원과정 중복인정 및 학기단축
 
 학사과정에 재학 중인 학생이 대학원 교과목을 미리 수강하고 향후 대학원 진학시 학사과정에서 수강한 대학원과목을 이후 입학한 대학원과정의 학점으로 중복 인정 받고 대학원과정 수업연한을 최대 1개 학기까지 단축할 수 있는 제도를 말합니다.
@@ -713,7 +713,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (121, '�
   - 석사과정 진학 시 6학점(전문대학원 학술학위 과정은 9학점까지) 인정받은 경우 1개 학기에 대해 조기수료를 신청할 수 있습니다.
   - 석사과정 진학 시 전적 대학원에서 이수한 학점이 6학점 이상 인정받으면 1개 학기에 대해 조기수료를 신청할 수 있으며, 학점 이수여부에 따라 추가 1개 학기에 대해 조기수료 신청이 가능합니다.(최소 6개 학기 등록 후 수료 가능)
 
-114 대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/121.jpg');
+114 대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (122, '학사제도 Pg. 122', '학사과정-대학원과정 연계 13
 
 ■ 학부생 연구학점제
@@ -738,7 +738,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (122, '�
 
 ※ 본 안내 사항은 프로그램 운영계획에 따라 변동될 수 있으므로, 참여시 공지 사항을 통해 세부내용을 확인 바랍니다.
 
-성균관대학교 115', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/122.jpg');
+성균관대학교 115', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (123, '학사제도 Pg. 123', '팀연구학점제
 
 연구 고성과 교수의 우수한 연구성과를 효과적으로 학생들에게 전수하기 위한 교육·연구 융합과목으로 참여한 교수와 학생이 팀연구프로젝트를 구성하여 연구를 수행하면 그 과정을 수업으로 인정하여 학점을 부여하는 제도입니다.
@@ -765,7 +765,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (123, '�
 
 116
 
-대학·대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/123.jpg');
+대학·대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (124, '학사제도 Pg. 124', '14. 성적평가/강의평가
 
 ■ 성적평가
@@ -791,7 +791,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (124, '�
 | 기말시험 | 6.17(월) ~ 6.23(일) | 12.15(월) ~ 12.19(금) |
 
 성균관대학교
-117', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/124.jpg');
+117', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (125, '학사제도 Pg. 125', 'Inspiring Future, Grand Challenge
 
 - 성적평가 횟수 및 시기
@@ -818,7 +818,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (125, '�
 
 118
 
-대학 · 대학원을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/125.jpg');
+대학 · 대학원을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (126, '학사제도 Pg. 126', '성적평가/강의평가 14
 
 ■ 학사과정 성적 상대평가
@@ -841,14 +841,14 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (126, '�
 | 기타 학장이 필요하다고 인정하는 교과목
 | * 단 1회성 학생대회와 연계하여 운영하는 교과목은 교과목별로 절대평가 적용이 안될 수 있음
 
-성균관대학교 119', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/126.jpg');
+성균관대학교 119', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (127, '학사제도 Pg. 127', '- 비전공자들이 성적취득에 대한 부담을 덜고 적극적으로 타학과에서 개설한 C/1과목을 수강할 수 있도록 C/1과목 개설강좌 수강자 가운데 C/1로 지정한 학과의 비전공자(원전공 또는 복수전공 이수자가 아닌 자)가 있는 경우 해당 강좌 전체 수강생 대상으로 상대평가를 시행합니다.
   ※ C/1로 지정하지 않은 학과의 비전공자가 수강 시에는 상대평가 적용
 
 - 분반강좌의 균질성 강화를 위한 성적평가 실시
   - 동일 과목을 여러 반으로 분반하여 여러 명의 교강사가 수업을 진행하는 경우에도 해당 학기 교과목의 교무분과 교수회의가 관점별로 합당성을 부여할 수 있도록 하기 위하여 분반 강좌의 수강생을 모두 통합하여 성적평가할 수 있습니다.
 
-120 대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/127.jpg');
+120 대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (128, '학사제도 Pg. 128', '```plaintext
 성적평가/강의평가 14
 
@@ -879,7 +879,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (128, '�
 
 성균관대학교
 121
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/128.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (129, '학사제도 Pg. 129', '학사과정 학사경고
 
 해당 학기 학업성적이 저조한 학생에게 학업에 더욱 정진할 수 있도록 주의를 주는 제도입니다.
@@ -905,7 +905,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (129, '�
 
 122
 
-대학 : 대학생활을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/129.jpg');
+대학 : 대학생활을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (13, '학사제도 Pg. 13', 'Inspiring Future, Grand Challenge
 
 * 학위과정별 의무 등록학기
@@ -934,7 +934,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (13, '학
 
 6
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/13.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (130, '학사제도 Pg. 130', '졸업요건 15
 
 15. 졸업요건
@@ -957,7 +957,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (130, '�
 
 ※ 졸업요건에 대한 세부사항은 학칙시행세칙 및 규정 등에 의거하여 결정
 
-성균관대학교 123', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/130.jpg');
+성균관대학교 123', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (131, '학사제도 Pg. 131', '```
 - 수료처리
   졸업학점과 졸업기준 성적은 충족하였으나 졸업평가에 합격하지 못하거나 3품 인증 중 어느 하나라도 취득하지 못한 경우 수료 처리됩니다.
@@ -979,7 +979,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (131, '�
     ※ 건축학과는 9학기에 조기졸업 가능
     ※ 편입학생은 신청 불가
 ```
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/131.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (132, '학사제도 Pg. 132', '졸업요건 15
 
 - 조기졸업 기준 성적
@@ -1004,7 +1004,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (132, '�
   - 일반대학원 박사과정 2007학년도 이후 입학자
     - 수료학점(전공 36학점 이상/총 60학점 이상/취득학점 기준) + 연구등록(최대 6학기) + 논문제출자격시험 합격 + 학위논문 심사 합격
 
-성균관대학교 125', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/132.jpg');
+성균관대학교 125', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (133, '학사제도 Pg. 133', '- 일반대학원 석박사통합과정 입학연도별 학위취득 요건
 일반대학원 석박사통합과정 2007학년도 이후 입학자
 → 등록(8학기) + 수료학점 충족 + 석·박사과정 종합시험 충족(과목제한 없음) + 연구등록(최대 4학기) + 졸업기준 성적 취득(총 평점평균 3.00 이상/취득학점 기준) + 논문제출 자격시험 합격 + 학위논문 심사 합격
@@ -1027,7 +1027,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (133, '�
 (최대 4학기) + 졸업기준 성적 취득(총 평점평균 3.00 이상/취득학점 기준) + 논문제출자격시험 합격 + 학위논문 심사 합격
 
 126 대학 · 대학원생을 위한 2025 학사제도 안내
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/133.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (134, '학사제도 Pg. 134', '졸업요건 15
 
 - 특수대학원 석사과정 학위취득 요건
@@ -1045,7 +1045,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (134, '�
 
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
-127', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/134.jpg');
+127', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (135, '학사제도 Pg. 135', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1070,7 +1070,7 @@ Inspiring Future, Grand Challenge
 
 128
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/135.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (136, '학사제도 Pg. 136', '16. 대학원과정 학위논문
 
 ■ 논문제출 자격시험
@@ -1093,7 +1093,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (136, '�
 
 성균관대학교
 
-129', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/136.jpg');
+129', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (137, '학사제도 Pg. 137', '학위청구논문 예비심사/심사
 
 대학원 학위과정에서의 학위청구논문심사는 수준 높은 논문의 배출을 위해 예비심사와 심사를 실시하며 예비심사가 필수인 학과는 예비심사에 합격해야 학위청구논문 심사를 받을 수 있습니다.
@@ -1116,7 +1116,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (137, '�
 
 130
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/137.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (138, '학사제도 Pg. 138', '대학원과정 학위논문 16
 
 - 특수대학원 석사학위청구 논문심사
@@ -1135,7 +1135,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (138, '�
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-131', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/138.jpg');
+131', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (139, '학사제도 Pg. 139', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1174,7 +1174,7 @@ Inspiring Future, Grand Challenge
 132
 
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/139.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (14, '학사제도 Pg. 14', '```
 등 록 03
 
@@ -1218,7 +1218,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (14, '학
 ※ 등록금 납부에 대한 세부사항은 홈페이지 공지사항, 학사안내, 등록안내 참조
 
 성균관대학교
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/14.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (140, '학사제도 Pg. 140', '```plaintext
 의무유급/제적/재입학 18
 
@@ -1256,7 +1256,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (140, '�
 • 학사경고성적의 학사경고 제적
 - 의무유급 2회 이후, 학사경고 횟수가 입학시점부터 시작하여 연속3회 또는 
 ```
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/140.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (141, '학사제도 Pg. 141', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1279,7 +1279,7 @@ Inspiring Future, Grand Challenge
 
 134
 대학 : 대학생활을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/141.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (142, '학사제도 Pg. 142', '재입학
 
 재입학은 제적된 학생이 일정기간 경과 후에 재입학을 신청하여 다시 학업의 기회를 가질 수 있도록 마련된 제도이며 재입학 신청은 매년 1월, 7월 학사서비스(GLS)를 통해 진행됩니다.
@@ -1300,7 +1300,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (142, '�
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-135', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/142.jpg');
+135', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (143, '학사제도 Pg. 143', '19. 증명서 발급 및 학적부 기재사항 정정
 
 ■ 증명서 발급
@@ -1344,7 +1344,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (143, '�
 
 136
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/143.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (144, '학사제도 Pg. 144', '증명서 발급 및 학적부 기재사항 정정
 
 - 증명서 우편신청 메뉴는 학교에서 증명서를 우편 발송하는 서비스입니다. 신청 전 전화 후 발송완료까지 국내외 및 영업일 기준 2~7일 정도의 기간이 소요됩니다. 해외우편은 DHL Express로 발송되며, 나라별 배송소요기간이 다릅니다. 발송된 우편물의 발송현황은 우편서비스 페이지에서 조회 가능합니다.
@@ -1373,7 +1373,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (144, '�
 
 성균관대학교
 
-137', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/144.jpg');
+137', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (145, '학사제도 Pg. 145', '```plaintext
 - 우체국 민원우편 신청(우편 수령)
   - 우체국에서 증명서를 신청하면 희망 주소지에서 증명서를 우편으로 받아볼 수 있습니다.
@@ -1414,7 +1414,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (145, '�
 
 138
 출처: 대학원학칙 및 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/145.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (146, '학사제도 Pg. 146', '증명서 발급 및 학적부 기재사항 정정
 
 19
@@ -1445,7 +1445,7 @@ Q5 도장찍힌 성적이 안 보여요.
 A5 도장찍힌 이수 후 학부 등의 사유로 재유학하기를 등록하고 있으면 성적증명서
 
 경운대학교
-139', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/146.jpg');
+139', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (147, '학사제도 Pg. 147', '상에 도전학기 이수내역이 표기되지 않습니다. 이후 정규학기를 등록하면 성적증명서에 표기됩니다.
 
 Q6 복수전공이 표기된 증명서를 받고 싶습니다.
@@ -1472,7 +1472,7 @@ A10 신청 후 발송부로 교부원에 연락(181185@skku.edu)하여 발송부
 
 140
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/147.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (148, '학사제도 Pg. 148', '학적부 기재사항 정정
 
 학교에 등록 된 성명, 생년월일, 주민등록번호를 정정할 경우에는 GLS에서 신청 가능하며, 반드시 증빙서류를 첨부해야 합니다.
@@ -1491,7 +1491,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (148, '�
 
 성균관대학교
 
-141', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/148.jpg');
+141', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (149, '학사제도 Pg. 149', '20. 학사과정 교직 이수
 
 ■ 교직이수
@@ -1512,7 +1512,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (149, '�
 ■ 이수방법
 - 교직과목 및 기본이수과목, 교직적성 및 인성검사, 응급처치 및 심폐소생술, 교육실습 등의 교직 이수요건을 충족하고 이수한 과목은 학기말 소정기간에 교직과정이수예정신고 및 교직과정이수확인원을 제출
   (사범대학 홈페이지 http://coe.skku.edu 참조)
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/149.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (15, '학사제도 Pg. 15', 'Inspiring Future, Grand Challenge
 
 - 학자금대출
@@ -1547,7 +1547,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (15, '학
 
 8
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/15.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (150, '학사제도 Pg. 150', '학사과정 교직 이수 20
 
 - 교직이수가능학과 및 승인인원(2025학년도 선발 기준)
@@ -1582,7 +1582,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (150, '�
 ※ 교직과정 미설치(또는 폐지) 학과 재학생은 교직과정 및 교직부전공 이수 불가함
 ※ 프랑스어문학과, 독일어문학과, 러시아어문학과, 화학공학과, 고분자공학과, 신소재공학부, 기계공학부, 건설환경공학부, 바이오메카트로닉스학과 교직과정 폐지
 
-성균관대학교 143', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/150.jpg');
+성균관대학교 143', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (151, '학사제도 Pg. 151', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1622,7 +1622,7 @@ Inspiring Future, Grand Challenge
 144
 
 대학·대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/151.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (152, '학사제도 Pg. 152', '```
 학사과정 교직 이수 20
 
@@ -1644,7 +1644,7 @@ Q5 소속 학과의 교직이수자 선발에서 탈락했습니다만, 대학�
 A5 대학원은 현재 교직이수가 가능합니다만, 본인의 졸업학과와 동일한 전공으로 대학원에 진학해야 교직이수 신청이 가능합니다. 자세한 사항은 교육대학원(02-760-0964)로 문의하시기 바랍니다.
 
 성균관대학교
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/152.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (153, '학사제도 Pg. 153', '21. 학사업무 담당 부서 안내
 
 ■ 학사콜센터
@@ -1694,7 +1694,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (153, '�
 - 학과가 소속된 대학행정실
 
 146 대학 · 대학원생을 위한 2025 학사제도 안내
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/153.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (154, '학사제도 Pg. 154', '학사업무 담당 부서 안내 21
 
 - 대학행정실 위치 및 전화번호
@@ -1732,7 +1732,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (154, '�
 | | 응용생명과학과 | 031)290-5702 | N센터 4층 |
 | | 외국인유학생지원팀 | 031)290-5026-5028 | 학생회관 1층 |
 
-성균관대학교 147', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/154.jpg');
+성균관대학교 147', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (155, '학사제도 Pg. 155', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1765,7 +1765,7 @@ AI | AI 및 빅데이터 역량 개발 활동 | 4차산업혁명에 필요한 �
 
 148
 출처 : 대학혁신지원팀 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/155.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (156, '학사제도 Pg. 156', '3품인증제(新3품제) 22
 
 으로 인증 신청하여야 합니다.
@@ -1799,7 +1799,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (156, '�
   대학원팀 (02-740-1724) [연구실습]
   교무팀 (02-760-1055) [비교과]
 
-성균관대학교 149', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/156.jpg');
+성균관대학교 149', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (157, '학사제도 Pg. 157', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -1834,7 +1834,7 @@ Inspiring Future, Grand Challenge
 150
 
 대학 · 대학원학사운영 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/157.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (158, '학사제도 Pg. 158', '3품인증제(제3품채움) ❷ 22
 
 2) 학생 스스로 선정한 봉사기관을 통한 이수
@@ -1859,7 +1859,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (158, '�
 
 성균관대학교
 151
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/158.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (159, '학사제도 Pg. 159', 'Sure, here is the transcribed text from the image:
 
 ---
@@ -1891,7 +1891,7 @@ Inspiring Future, Grand Challenge
 
 출처 : 대학생활안내문 2025 학사제도 안내
 
----', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/159.jpg');
+---', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (16, '학사제도 Pg. 16', '```
 등록 03
 
@@ -1920,7 +1920,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (16, '학
 
 성균관대학교
 9
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/16.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (160, '학사제도 Pg. 160', '3종인증제(제3종제) ● 22
 
 - 외국인전형신입학생의 입학연도별 공인외국어 성적 인증 기준
@@ -1949,7 +1949,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (160, '�
 | 버디프로그램 | 외국인 학생과 버디매칭을 통한 문화 경험 - 학기 1회당 10시간 인정(최대 2학기 20시간) |
 | 해외봉사활동 | 해외봉사활동 참여 - 주관 부서에서 정한 매일리시간 기준, 최대 30시간 인정 |
 
-성균관대학교 153', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/160.jpg');
+성균관대학교 153', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (161, '학사제도 Pg. 161', 'Inspiring Future, Grand Challenge
 
 | 항목            | 설명                                                                 |
@@ -1981,7 +1981,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (161, '�
 
 154
 
-대학 · 대학원을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/161.jpg');
+대학 · 대학원을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (162, '학사제도 Pg. 162', '3품인증제(新3품제) 22
 
 [창의/진로개발영역]
@@ -2009,7 +2009,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (162, '�
 - 창업지원단창업인증센터 인정하는 창업, 협업의 사업으로 창업
 - 사업자등록증 및 관련 증빙서류를 통해야 하며 인증심사
 
-성균관대학교 155', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/162.jpg');
+성균관대학교 155', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (163, '학사제도 Pg. 163', 'Inspiring Future, Grand Challenge
 
 ● AI인증
@@ -2030,7 +2030,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (163, '�
 ※ 교내 AI인증 연계 비교과 프로그램, 외부 교육기관이 개설한 AI관련 교육(챌린지 스페이스 코이카이슈프레임워크신청)을 통해 개별 검토순으로 인증 신청 가능)
 
 156
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/163.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (164, '학사제도 Pg. 164', '3품인증제(제3품제) 22
 
 <교내 AI/데이터 관련 교과목 표>
@@ -2071,7 +2071,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (164, '�
 | | BUS3042-마케팅데이터애널리틱스(3) | |
 | | BUS3045-비즈니스애널리틱스(3) | |
 
-성균관대학교 157', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/164.jpg');
+성균관대학교 157', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (165, '학사제도 Pg. 165', '```plaintext
 이수구분
 
@@ -2124,7 +2124,7 @@ IBB3023-생명화학유전학및Python프로그래밍(3)
 158
 
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/165.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (166, '학사제도 Pg. 166', '3품인증제(제3품제) 22
 
 ● 인턴십인증
@@ -2136,7 +2136,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (166, '�
 - 대학원입이 인정하는 교과 연구체험(학부생 연구학점제)을 이수하여 2학점 이상 취득
 - 비교과 연구체험을 280시간 이상 수행(현장실습체계 교외이수보고승인신청 승인 후 인턴십 인증 신청 가능), 연구체험 이수증(기관 확인서 등) 및 연구결과 보고서(지도교수 서명 또는 기관 직인 날인 포함) 제출 필수
 
-성균관대학교 159', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/166.jpg');
+성균관대학교 159', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (167, '학사제도 Pg. 167', 'Inspiring Future, Grand Challenge
 
 수료후6개월초과자 3졸 면제 조치
@@ -2156,7 +2156,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (167, '�
 
 160
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/167.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (168, '학사제도 Pg. 168', '22. 3품인증제(叡3품제)
 
 ■ (叡)3품인증제는 어떤 제도인가
@@ -2181,7 +2181,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (168, '�
 
 성균관대학교
 
-161', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/168.jpg');
+161', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (169, '학사제도 Pg. 169', '인증신청
 - 각 졸업 해당 요건 충족 시 증빙서류를 첨부하여 챌린지스퀘어를 통해 온라인으로 인증 신청하여야 합니다.
 ※ 외국인학생의 글로벌 인증 취득신청은 외국인유학생지원팀으로 문의/신청
@@ -2210,7 +2210,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (169, '�
 
 162
 
-대학·대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/169.jpg');
+대학·대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (17, '학사제도 Pg. 17', '4. 일반/특별휴학 및 복학
 
 일반휴학
@@ -2239,7 +2239,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (17, '학
   - 휴학 신청은 1회에 2개 학기까지 가능합니다.
   - 일반휴학은 학사과정은 6개 학기, 약학대학3학년 1학기로 편입한 학생의 경우 4개 학기까지 가능합니다.
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/17.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (170, '학사제도 Pg. 170', '3품인증제(品3品제) ■ 22
 
 ■ 품 별 취득 방법
@@ -2270,7 +2270,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (170, '�
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-163', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/170.jpg');
+163', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (171, '학사제도 Pg. 171', 'edu), 사회복지자원봉사인증관리(www.vms.or.kr), 1365자원봉사포털 (https://www.1365.go.kr), 학교홈페이지 공지사항을 참고하여 선정할 수 있습니다.
 ■ 사회봉사활동은 1일 최대 8시간까지 인정됩니다.
 
@@ -2292,7 +2292,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (171, '�
 
 164
 
-출처 : 대학생활을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/171.jpg');
+출처 : 대학생활을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (172, '학사제도 Pg. 172', '4) 단체 봉사활동을 통한 이수
 ■ 단체 봉사활동은 학교에 등록된 동아리/대학/총학생회로 제한하며 최소 10인 이상이 동일한 장소(기관)에서 8시간 이상 사회봉사활동을 해야야 합니다.
 → 사회봉사활동결과확인서는 봉사활동을 증빙할 수 있는 사진 등의 자료 첨부
@@ -2308,7 +2308,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (172, '�
 ■ 사회봉사활동결과확인서는 학교양식과 기관발급 양식 모두 인정됩니다. 하지만 기관발급 양식의 경우 확인서 발급에 봉사활동시간 인정을 위한 필수적인 요소들이 누락되지 않아야 합니다.(봉사자명, 지도교수명칭 및 인실제 구체적 봉사활동 내용, 장소/담당자 및 기관 대표자 확인 등)
 
 ※ 해외 봉사활동을 통한 이수 불가
-■ 해외 봉사활동은 글로벌(국제) 영역만 인정받을 수 있으며, 민성 영역에서 인정되지 않습니다.', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/172.jpg');
+■ 해외 봉사활동은 글로벌(국제) 영역만 인정받을 수 있으며, 민성 영역에서 인정되지 않습니다.', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (173, '학사제도 Pg. 173', 'Inspiring Future, Grand Challenge
 
 ● 글로벌인증
@@ -2337,7 +2337,7 @@ E계열
 
 166
 
-대학·대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/173.jpg');
+대학·대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (174, '학사제도 Pg. 174', '```plaintext
 3공인외국어(제3공인) 22
 
@@ -2391,7 +2391,7 @@ G-TELP
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 167
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/174.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (175, '학사제도 Pg. 175', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -2442,7 +2442,7 @@ IELTS           2001학번 이전 5.0 이상
 
 168
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/175.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (176, '학사제도 Pg. 176', '3공통요청서(제3공통) 22
 
 • 외국인전형신입학생의 입학연도별 공인외국어 성적 인증 기준
@@ -2475,7 +2475,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (176, '�
 3) 대한상공회의소 인증
    워드프로세서 1급(2011년 이전), 종합워드프로세서(2012년 이후), 컴퓨터활용능력 1급, 컴퓨터활용사
 
-성균관대학교 169', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/176.jpg');
+성균관대학교 169', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (177, '학사제도 Pg. 177', '4) 한국생산성본부 인증  
    ITQ A 또는 B등급 2과목 이상 취득자, ICDL 2과목 이상 취득자 (단, 2과목은 다른 과목이어야 하며, 버전은 상관없음)  
    * ITQ A 또는 B등급에 대한 보충 설명  
@@ -2499,7 +2499,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (177, '�
 10) 정보통신기획평가원 인증: 소프트웨어 역량검정(TOPCIT) 3수준 이상에 성적 취득  
 
 대학원·대학원을 위한 2025 학사제도 안내  
-170  ', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/177.jpg');
+170  ', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (178, '학사제도 Pg. 178', '```plaintext
 3품인증제(제3품제) 22
 
@@ -2535,7 +2535,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (178, '�
 
 성균관대학교
 171
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/178.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (179, '학사제도 Pg. 179', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -2574,7 +2574,7 @@ Inspiring Future, Grand Challenge
 
 172
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/179.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (18, '학사제도 Pg. 18', '일반/특별휴학 및 복학 04
 
 경우 제외) 및 의과대학 8개 학기), 석사 및 박사과정은 3개 학기(특수대학원 석사과정 4개 학기), 석박사통합과정은 6개 학기까지 가능합니다.
@@ -2598,7 +2598,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (18, '학
 
 성균관대학교
 
-11', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/18.jpg');
+11', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (19, '학사제도 Pg. 19', '일반복학
 
 일반휴학 및 특별휴학 기간이 만료되면 다시 재학하기 위하여 복학 신청해야합니다. 해당학기 학사일정에 정해진 휴·복학 기간 내 학사서비스(GLS)를 통해 복학 신청이 가능합니다.
@@ -2612,7 +2612,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (19, '학
 
 12
 
-대학 · 대학원을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/19.jpg');
+대학 · 대학원을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (20, '학사제도 Pg. 20', '5. 입대휴학 및 제대복학
 
 ■ 입대휴학
@@ -2630,7 +2630,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (20, '학
 - 귀향 또는 입영연기 조치자임에도 신고를 하지 않은 채 학업에 복귀하지 않을 경우, 제적 등 불이익이 발생할 수 있으니 유의하시기 바랍니다.
 
 성균관대학교  
-SUNGKYUNKWAN UNIVERSITY', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/20.jpg');
+SUNGKYUNKWAN UNIVERSITY', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (21, '학사제도 Pg. 21', '임대휴학자 학점인정
 
 학생이 수업일수 3/4선 경과 후, 중간고사 이내에 임대휴학 할 경우, 지금까지 다닌 학기의 성적을 받고 복학 후 다음 학기를 등록할 것인지, 아니면 지금까지 다닌 학기의 성적을 포기하고 복학 후에 해당 학기를 다시 이수할 것인지에 대한 의사표시를 하는 제도입니다.
@@ -2649,7 +2649,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (21, '학
 
 14
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/21.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (22, '학사제도 Pg. 22', '입대휴학 및 제대복학 05
 
 ■ 제대복학
@@ -2677,7 +2677,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (22, '학
 
 성균관대학교
 
-15', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/22.jpg');
+15', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (23, '학사제도 Pg. 23', '6. 학사과정 교육과정 이수
 
 ■ 교육과정 개요
@@ -2697,7 +2697,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (23, '학
 
 16
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/23.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (24, '학사제도 Pg. 24', '학사과정 교육과정 이수 06
 
 ■ 졸업소요학점 충족
@@ -2725,7 +2725,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (24, '학
   - C/L 과목은 국제어수업 의무 충족학점으로 중복인정 가능
   - 제1전공, 제2전공, 제2전공을 경영하는 부전공자는 해당이 경영학에서 C/L 과목으로 지정한 경영학의 국제어수업 OOO과목으로 이수 가능
 
-성균관대학교 17', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/24.jpg');
+성균관대학교 17', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (25, '학사제도 Pg. 25', '죄우, 이 학생의 국제수업 취득학점은 6학점이 아닌, 3학점으로 계산됩니다.
 - 해외 당 대학 학위과정 및 우리대학 개설 국제하계강좌(ISS)등 수강에서 취득한 전공학점은 국제수업 학점으로 인정됩니다.(국내 타 대학 학점 교류를 통해 취득한 수업은 국제수업 학점으로 인정되지 않음)
 - 국학 분야 학문(국어국문학과, 한문학과, 한문교육과, 사학과) 학생 및 재직자 전형/제2국어 계약학과(중어중문학과, 아랍어학과, 스페인어통번역학과) 학생은 국제수업 의무학점이 면제됩니다. 단, 국학 분야 학문 학생이 제2전공으로 국학 분야 제2전공으로 국학 분야 학문(국어국문학과, 한문학과, 한문교육과, 사학과) 학생이 아닌 학생이 경제학과를 복수전공한다면 전공 9학점 이상 국제수업 의무학점을 충족해야 합니다.
@@ -2735,7 +2735,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (25, '학
 
 18
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/25.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (26, '학사제도 Pg. 26', '```plaintext
 학사과정 교육과정 이수 06
 
@@ -2760,7 +2760,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (26, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 19
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/26.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (27, '학사제도 Pg. 27', '
 성균교양(중점·균형) 교육과정 이수 방법
 
@@ -2837,7 +2837,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (27, '학
 - 글로벌융합학부: ‘중점영역’ 기준 이수
 - 인문계열/자연계열 일부 학과: 계열 공통에서 특정 영역 필수 이수
 - 공학교육인증(ABEEK): 성균교양 내 특정 교과가 공학인증으로 대체됨
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/27.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (28, '학사제도 Pg. 28', '학사과정 교육과정 이수 06
 
 - 2024학번 성균교양(중점·균형)과정 학점 이수표
@@ -2875,7 +2875,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (28, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-21', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/28.jpg');
+21', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (29, '학사제도 Pg. 29', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -2939,7 +2939,7 @@ Inspiring Future, Grand Challenge
 
 22
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/29.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (30, '학사제도 Pg. 30', '```plaintext
 학사과정 교육과정 이수 06
 
@@ -2979,7 +2979,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (30, '학
 - ※ 공학교육인증ABEEK 이상학부: p.55 ~ ''학사과정 공학교육인증ABEEK'' 참조
 
 성균관대학교 23
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/30.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (31, '학사제도 Pg. 31', '```
 Inspiring Future, Grand Challenge
 
@@ -3013,7 +3013,7 @@ Inspiring Future, Grand Challenge
 
 24
 대학·대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/31.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (32, '학사제도 Pg. 32', '학사과정 교육과정 이수 06
 
 ※ 글로벌융합학부
@@ -3046,7 +3046,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (32, '학
 
 성균관대학교
 
-25', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/32.jpg');
+25', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (33, '학사제도 Pg. 33', 'Sure, here is the transcribed text from the image:
 
 ---
@@ -3067,7 +3067,7 @@ Inspiring Future, Grand Challenge
 
 대학·대학원을 위한 2025 학사제도 안내
 
----', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/33.jpg');
+---', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (34, '학사제도 Pg. 34', '학사과정 교육과정 이수 06
 
 - 2012~2013학번 교양·기초 학점 이수표
@@ -3097,7 +3097,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (34, '학
 
 성균관대학교
 
-27', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/34.jpg');
+27', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (35, '학사제도 Pg. 35', '```
 Inspiring Future, Grand Challenge
 
@@ -3130,7 +3130,7 @@ Inspiring Future, Grand Challenge
 28
 
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/35.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (36, '학사제도 Pg. 36', '학사과정 교육과정 이수 06
 
 - 2001~2004학번 교양·기초 학점 이수표
@@ -3156,7 +3156,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (36, '학
 
 성균관대학교 SUNGKYUNKWAN UNIVERSITY
 
-29', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/36.jpg');
+29', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (37, '학사제도 Pg. 37', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -3193,7 +3193,7 @@ Inspiring Future, Grand Challenge
 
 대학 · 대학원생을 위한 2025 학사제도 안내
 30
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/37.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (38, '학사제도 Pg. 38', '학사과정 교육과정 이수 06
 
 - 성공인성(중점·균형)과정 대체 교과목 지정 현황
@@ -3244,7 +3244,7 @@ GEDR011 | 시민리더십 | 2
 
 ※ ''중점교양-리더십''과목들은 ''GEDR014 실천리더십''으로 재수강 가능합니다.
 
-성균관대학교 31', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/38.jpg');
+성균관대학교 31', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (39, '학사제도 Pg. 39', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -3304,7 +3304,7 @@ Inspiring Future, Grand Challenge
 
 32
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/39.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (40, '학사제도 Pg. 40', '학사과정 교육과정 이수 06
 
 - 중점교양-글로벌
@@ -3403,7 +3403,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (40, '학
 
 ※ 재수강 시 변경된 이수영역의 학점으로 인정되므로 본인의 졸업요건 및 취득한 이수영역 결과를 고려하여 수강신청에 유의해야 합니다.
 
-성균관대학교 33', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/40.jpg');
+성균관대학교 33', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (41, '학사제도 Pg. 41', '```
 Inspiring Future, Grand Challenge
 
@@ -3465,7 +3465,7 @@ Inspiring Future, Grand Challenge
 
 34
 대학: 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/41.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (42, '학사제도 Pg. 42', '학사과정 교육과정 이수 06
 
 ■ DS 교육과정 이수 방법
@@ -3488,7 +3488,7 @@ DS기반 영역 전체 6 or 9
 
 ※ DS기반 영역의 "데이터분석과제기초" 교과목은 필수 이수 교과목(공통)이며, 2학년부터 수강해야 합니다.
 
-성균관대학교 35', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/42.jpg');
+성균관대학교 35', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (43, '학사제도 Pg. 43', 'Inspiring Future, Grand Challenge
 
 - 2021-2024학번 DS교육과정 학점 이수표
@@ -3512,7 +3512,7 @@ DS기반 영역 전체 9 or 11
 
 36
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/43.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (44, '학사제도 Pg. 44', '학사과정 교육과정 이수 06
 
 ■ 전공 교육과정 이수 방법
@@ -3537,7 +3537,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (44, '학
   - 학사과정에서 이수한 학점 중 대학원 전공 또는 선택학점으로 인정합니다. 다만, 전공과 상이한 교과목을 이수한 경우에는 대학원 과정의 선택학점으로 인정됩니다.
 
 성균관대학교
-37', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/44.jpg');
+37', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (45, '학사제도 Pg. 45', 'Inspiring Future, Grand Challenge
 
 - 2020학년도 이전 입학생들의 전공 이수기준
@@ -3569,7 +3569,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (45, '학
 
 38
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/45.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (46, '학사제도 Pg. 46', '학사과정 교육과정 이수 06
 
 2024-2025학번 학과별 전공학점 이수기준표
@@ -3626,7 +3626,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (46, '학
 
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
-39', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/46.jpg');
+39', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (47, '학사제도 Pg. 47', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -3681,7 +3681,7 @@ Inspiring Future, Grand Challenge
 
 40
 대학 : 대학원입학을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/47.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (48, '학사제도 Pg. 48', '학사과정 교육과정 이수 06
 
 2021~2023학번 학과별 전공학점 이수기준표
@@ -3746,7 +3746,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (48, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-41', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/48.jpg');
+41', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (49, '학사제도 Pg. 49', 'Sure, here is the transcribed text from the image:
 
 ---
@@ -3779,7 +3779,7 @@ Inspiring Future, Grand Challenge
 
 42 | 대학 : 대학원생을 위한 2025 학사제도 안내
 
----', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/49.jpg');
+---', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (50, '학사제도 Pg. 50', '학사과정 교육과정 이수 06
 
 - 2021~2024학번 연계전공별 전공학점 이수기준표
@@ -3810,7 +3810,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (50, '학
 ※ (이수 예시) 비컴공학과의 일반물리학은 전공과목 24학점 이상 + 전공선택 12학점 이상 이수
 ※ 전공학 이수학점 충족 이외에 졸업요건이 학교별로 상이할 수 있으니 정확한 졸업요건은 소속 전공별 단과대학 행정실 또는 학과사무실에 문의 바람
 
-성균관대학교 43', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/50.jpg');
+성균관대학교 43', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (51, '학사제도 Pg. 51', '```
 Inspiring Future, Grand Challenge
 
@@ -3869,7 +3869,7 @@ Inspiring Future, Grand Challenge
 
 44
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/51.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (52, '학사제도 Pg. 52', '학사과정 교육과정 이수 06
 
 대학(학과) | 전공 이수구분 | 최소 이수학점 | 졸업학점 | 비고
@@ -3914,7 +3914,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (52, '학
 | 이과 | 공과대학 | 기계공학부 | 18/18 | 32/15 | 63/42 | 130
 예시2 | 생명공학대학 | 식품생명공학과 | 18/18 | 32/15 | 63/42 | 130
 
-성균관대학교 45', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/52.jpg');
+성균관대학교 45', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (53, '학사제도 Pg. 53', '※ (이수 학시기) 2016~20학번 유학·동양학과 입학생은 전공핵심 24학점 이상 + 전공일반 39학점 이상 이수/복수전공 = 전공핵심 24학점 이상 + 전공일반 15학점 이상 이수
 ※ (이수 학시기) 2013~20학번 국어국문학과 입학생은 - 전필군: 전공핵심, 전공일반 영역 구분없이 총 63학점 이상 이수/복수전공 = 전공핵심, 전공일반 영역 구분없이 총 48학점 이상 이수
 ※ (이수학점) 2013학번 기계공학부 기계시스템 전공학생은 전공핵심 18학점 이상 + 전공일반 32학점 이상 + 설계학점 13학점 이상 이수/복수전공 = 전공핵심 18학점 이상 + 전공일반 30학점 이상 + 설계학점 9학점 이상 이수
@@ -3930,7 +3930,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (53, '학
 ※ 2020학년도 2학기부터 데이터융합학부 복수전공 할 수 없음
 
 46 대학 · 대학원생을 위한 2025 학사제도 안내
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/53.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (54, '학사제도 Pg. 54', '```plaintext
 학사과정 교육과정 이수 06
 
@@ -3961,7 +3961,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (54, '학
 
 성균관대학교
 47
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/54.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (55, '학사제도 Pg. 55', '```
 Inspiring Future, Grand Challenge
 
@@ -4018,7 +4018,7 @@ Inspiring Future, Grand Challenge
 정보통신공학과 | **/**/** | **/**/** | 63/42 | 130 | 
 
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/55.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (56, '학사제도 Pg. 56', '학사과정 교육과정 이수 06
 
 | 대학(학과) | 전공 이수구분별 최소 이수학점 | 전공 | 졸업 | 비고 |
@@ -4054,7 +4054,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (56, '학
 
 경운대학교
 KYUNGWOON UNIVERSITY
-49', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/56.jpg');
+49', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (57, '학사제도 Pg. 57', 'Inspiring Future, Grand Challenge
 
 | 대학(학과) | 전공 이수구분 최소 이수학점 | 전공과목 | 이수학점 | 비고 |
@@ -4080,7 +4080,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (57, '학
 
 50
 
-대학 · 대학원을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/57.jpg');
+대학 · 대학원을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (58, '학사제도 Pg. 58', '```plaintext
 학사과정 교육과정 이수 06
 
@@ -4122,7 +4122,7 @@ FRE2006 프랑스문화와예술 3 3 6 프랑스어문학과
 
 성균관대학교
 51
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/58.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (59, '학사제도 Pg. 59', '```
 Inspiring Future, Grand Challenge
 
@@ -4160,7 +4160,7 @@ Inspiring Future, Grand Challenge
 
 52
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/59.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (60, '학사제도 Pg. 60', '7. 대학원과정 교육과정 이수
 
 ■ 대학원별, 학위과정별 수료학점
@@ -4230,7 +4230,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (60, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-53', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/60.jpg');
+53', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (61, '학사제도 Pg. 61', '개별연구과목, 선수학점
 
 - 개별연구 과목 수강
@@ -4256,7 +4256,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (61, '학
 
 54
 
-대학: 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/61.jpg');
+대학: 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (62, '학사제도 Pg. 62', '학사과정 공학교육인증(ABEEK) 08
 
 8. 학사과정 공학교육인증(ABEEK)
@@ -4280,7 +4280,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (62, '학
   - 글로벌 스탠다드에 부합하는 공학교육을 이수한 학생은 세계 어디서든 전문 엔지니어로서의 자격을 인정받을 수 있습니다(Global Mobility).
   - 우리 대학은 산업체의 요구에는 공학교육인증을 통해 반영되는 10가지 학습성과를 통해 학생들이 졸업 후 산업체에서 요구하는 자질을 갖추도록 하고 있으며 산업체에서 선호하는 인재로서의 역할을 수행할 수 있습니다.
 
-성균관대학교 55', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/62.jpg');
+성균관대학교 55', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (63, '학사제도 Pg. 63', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -4304,7 +4304,7 @@ Inspiring Future, Grand Challenge
 56
 
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/63.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (64, '학사제도 Pg. 64', '학사과정 공학교육인증(ABEEK) 08
 
 - 공학교육인증 심화프로그램 학위명
@@ -4329,7 +4329,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (64, '학
 | 화학공학부            | 화학공학심화프로그램 | 화학공학부 | 화학공학부 |
 |                      | (BS in Chemical Engineering) | (BS in Engineering) |
 
-경운대학교 57', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/64.jpg');
+경운대학교 57', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (65, '학사제도 Pg. 65', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -4364,7 +4364,7 @@ Inspiring Future, Grand Challenge
 58
 
 단국 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/65.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (66, '학사제도 Pg. 66', '```
 학사과정 공학교육인증(ABEEK) 08
 
@@ -4409,7 +4409,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (66, '학
 
 성균관대학교
 59
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/66.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (67, '학사제도 Pg. 67', '```
 Inspiring Future, Grand Challenge
 
@@ -4450,7 +4450,7 @@ Inspiring Future, Grand Challenge
 60
 
 대학 : 대학생활을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/67.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (68, '학사제도 Pg. 68', '학사과정 공학교육인증(ABEEK) 08
 
 학과 | 프로그램명 | 학수번호 | 교과목명 | 영역구분 | 학점
@@ -4490,7 +4490,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (68, '학
 * 입학년도별 인증필수 교과목이 상이하므로, 입학년도 기준을 확인하여 필수교과목을 모두 이수하여야 함(학과(부) 홈페이지 및 포털게시판에서 확인)
 * 졸업시험(석사/박사)제도가 운영될 예정 (2024학년도 이후 입학 학생)
 
-성균관대학교 61', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/68.jpg');
+성균관대학교 61', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (69, '학사제도 Pg. 69', '```
 Inspiring Future, Grand Challenge
 
@@ -4535,7 +4535,7 @@ Inspiring Future, Grand Challenge
 62
 
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/69.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (70, '학사제도 Pg. 70', '```
 학사과정 공학교육인증(ABEEK) 08
 
@@ -4581,7 +4581,7 @@ EME3068 | **산업공학특론 | 전공선택 | 3
 
 성균관대학교
 63
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/70.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (71, '학사제도 Pg. 71', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -4627,7 +4627,7 @@ Inspiring Future, Grand Challenge
 64
 
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/71.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (72, '학사제도 Pg. 72', '학사과정 공학교육인증(ABEEK) 08
 
 ※ 2013학년도 1학기 이후 편입한 학생은 최소 2개 학기 최대 18학점까지 수강 가능합니다.
@@ -4648,7 +4648,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (72, '학
 • 수학능력 부족 외국인 유학생의 수강신청 가능학점 제한
 - 외국인 유학생 중 수학능력이 부족하다고 판단되는 신입학자 및 편입학자는 입학 후 1학기 동안 수강신청 가능학점을 12학점으로 제한합니다. 3월 1일 학기 개시일 이전에 입학한 학생의 경우 전년도 12월 31일까지 TOPIK 4급 이상의 성적표를 제출해야 하며, 9월 1일 학기 개시일 이전에 입학한 학생의 경우 전년도 6월 30일까지 성적표를 제출해야 합니다. 성적표를 제출하지 않을 경우 수강신청 가능학점을 12학점으로 제한합니다. (단, 연수과정 및 어학연수에 해당하는 학생, 한국부총장추천자, 한국정부초청장학생 제외)
 
-성균관대학교 65', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/72.jpg');
+성균관대학교 65', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (73, '학사제도 Pg. 73', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -4678,7 +4678,7 @@ Inspiring Future, Grand Challenge
           |        | - 그 외 대학원 : 2학점
 
 66 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/73.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (74, '학사제도 Pg. 74', '수강신청/수업 09
 
 ■ 학사과정 수강신청학점 이월제도
@@ -4706,7 +4706,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (74, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-67', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/74.jpg');
+67', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (75, '학사제도 Pg. 75', '수강철회
 
 해당 학기 중 수강 신청하여 이수하고 있는 일부 과목에 대해 계속 수강과 그에 따른 성적취득을 포기하는 제도입니다.
@@ -4735,7 +4735,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (75, '학
 
 68
 
-출처: 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/75.jpg');
+출처: 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (76, '학사제도 Pg. 76', '수강신청/수업 09
 
 - 수강철회과목은 성적표 및 성적증명서에 "W"로 표기됩니다.
@@ -4757,7 +4757,7 @@ A3 수강철회를 신청한 학생들은 인해 해당 강좌를 계속 수강�
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-69', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/76.jpg');
+69', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (77, '학사제도 Pg. 77', '학사과정 재수강
 
 학업성취도가 낮은 과목(C0이하 등급)을 다시 수강할 수 있도록 함으로써 학업의 보완 기회를 제공하는 제도입니다.
@@ -4784,7 +4784,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (77, '학
 
 70
 
-대학 : 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/77.jpg');
+대학 : 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (78, '학사제도 Pg. 78', '수강신청/수업 09
 
 - 재학 중 C+이하 등급으로 취득한 과목은 학기 및 횟수 제한 없이 재수강할 수 있습니다. 다만, B0이상 등급으로 취득한 과목은 다시 수강신청 할 경우, 수강신청화면에 ''재수강 불가''안내창이 표시되며 해당과목은 재수강 신청 할 수 없습니다.
@@ -4796,7 +4796,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (78, '학
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
 
-71', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/78.jpg');
+71', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (79, '학사제도 Pg. 79', '```
 F A Q
 
@@ -4816,7 +4816,7 @@ Q5 재수강 과목 성적이 최초 수강보다 더 낮게 나왔습니다. �
 A5 재수강 과목의 최종 성적을 취소처리하는 것은 대학의 학칙이나 학사 내규에 위배될 수 있습니다. 따라서 재수강한 성적만을 최종 성적표에 반영합니다.
 
 출처 : 대학생활을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/79.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (8, '학사제도 Pg. 8', '
 1. 2025학년도 학사일정표 – 1학기
 
@@ -4847,7 +4847,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (8, '학�
 - 7. 28. (월) ~ 8. 1. (금): 2학기 대학원 수강신청
 - 8. 22. (금) ~ 8. 26. (화): 2025학년도 2학기 등록 및 분할납부 1차 등록
 - 8. 31. (일): 여름방학 종료
-', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/8.jpg');
+', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (80, '학사제도 Pg. 80', '수강신청/수업 09
 
 Q6 재수강해서 F등급을 받았습니다. 성적은 어떻게 되나요?
@@ -4868,7 +4868,7 @@ A10 성적증명서에는 성적처리 후 2~3주일 후에 반영됩니다.
 Q11 학수번호가 같던 교과목의 이수영역이 전공필수에서 전공교로 변경된 경우에도 재수강이 가능한가요?
 A11 재수강은 가능합니다. 다만, 재수강 시 변경된 영역으로 인정됩니다. 따라서, 본인이 졸업요건 및 취득한 이수영역 점수를 고려하여 수강신청 하셔야 합니다. 이 점 유의 바랍니다.
 
-성균관대학교 73', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/80.jpg');
+성균관대학교 73', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (81, '학사제도 Pg. 81', '학사과정 학점포기
 
 교육과정 변경에 따른 학수번호 변경·폐지 교과목의 재수강이 불가능한 데 대한 보완책으로 기 취득한 교과목의 성적을 삭제할 수 있도록 한 제도입니다.
@@ -4903,7 +4903,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (81, '학
 
 74
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/81.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (82, '학사제도 Pg. 82', '수강신청/수업 09
 
 F A Q
@@ -4917,7 +4917,7 @@ A2 매학기 2과목 이내 범위에서 2004년 이전 취득 성적은 포기�
 Q3 2004학번으로 그 동안 2004년 이전 취득과목 중 2과목을 학점포기 하였습니다. 7학기에 2005년 이후 취득 성적을 1과목 포기하고자 합니다. 이 경우 8학기에도 2005년 이후 취득 성적을 1과목 포기할 수 있나요?
 A3 2004학번의 경우, 2004년 이전 취득 성적은 매학기 2과목 이내에서 학점포기 신청 가능하며, 7학기 또는 8학기에는 2004년 이후 취득 성적을 포함하여 2과목 범위 내에서 학점포기 신청 가능합니다. 2005년 이후 취득 성적의 학점포기 신청 가능 학기는 7학기 중 2학기까지로 제한되므로, 7학기까지 2004년 이후 취득 성적을 1과목 포기한 경우, 8학기에는 2005년 이후 취득과목 중 1과목에 대하여 학점포기를 할 수 있습니다.
 
-성균관대학교 75', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/82.jpg');
+성균관대학교 75', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (83, '학사제도 Pg. 83', 'Q4 9학기 재 이수중인 학생은 05년 이후에 취득한 과목의 학점을 포기할 수 있나요?  
 A4 학점포기의 시기를 7학기 이후로 제시한 것은 4학년 2학기부터 제도를 활용할 수 있도록 하기 위한 것입니다. 7학기 이상 재학 중인 학생이 학점이 7학기 또는 8학기에 2005년 이후 취득, 학점 등 과목을 학점포기하지 않은 경우 9학기 이후에도 학점포기를 할 수 있습니다.
 
@@ -4935,7 +4935,7 @@ A8 학점포기는 재학 중 소정기간내에 신청할 수 있습니다.
 
 76
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/83.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (84, '학사제도 Pg. 84', '수강신청/수업 09
 
 ■ 스마트출석관리시스템 통한 출결 관리
@@ -4966,7 +4966,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (84, '학
 
 성균관대학교
 SUNGKYUNKWAN UNIVERSITY
-77', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/84.jpg');
+77', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (85, '학사제도 Pg. 85', '출결변경신청(출석인정신청)
 - 출석인정사유에 해당할 경우 출결변경(출석인정) 신청 가능하며, 교강사의 판단에 따라 승인여부가 결정됨
 - 신청 방법: 스마트출결관리시스템 WEB/APP 접속 → 출결변경신청 → 등록
@@ -4998,7 +4998,7 @@ i-Campus 플랫폼을 통해 온라인으로 운영되는 수업유형을 말하
 
 78
 
-대학·대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/85.jpg');
+대학·대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (86, '학사제도 Pg. 86', '수강신청/수업 09
 
 ■ 도전학기
@@ -5022,7 +5022,7 @@ TO-BE
 
 - 여름방학에 개설되는 도전학기 혁신융합수업은 학점이 부여되는 정규수업으로 여름방학에 수업을 미리 듣고 다음 정규학기에 학점을 인정받는 수업입니다. AI, 4차 산업혁명, 학생성공, 기업가정신 등 다양한 창의융합적 과목을 들을 수 있습니다.
 
-성균관대학교 79', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/86.jpg');
+성균관대학교 79', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (87, '학사제도 Pg. 87', '```
 Inspiring Future, Grand Challenge
 
@@ -5048,7 +5048,7 @@ Inspiring Future, Grand Challenge
 
 80
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/87.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (88, '학사제도 Pg. 88', '수강신청/수업 09
 
 참여함으로써, 여러분의 미래를 창의적이고 도전적으로 설계할 수 있는 역량을 기를 수 있습니다. 또한 다양한 국제교류프로그램에도 참여하여 세계를 경험하고 외국의 학생들과 활발히 소통할 수 있습니다.
@@ -5072,7 +5072,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (88, '학
    - 실습기관에 접속하여 매주 실습내용 및 배운 내용을 주차별로 기록(주차보고서)
    - 실습 종료 후 최종 보고서 작성(종합보고서) → 기업 담당자는 졸업 후 평가표 작성 → 제출한 서류를 통해 현장실습 교육과 학점 인정
 
-성균관대학교 81', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/88.jpg');
+성균관대학교 81', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (89, '학사제도 Pg. 89', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -5088,7 +5088,7 @@ Inspiring Future, Grand Challenge
 82
 
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/89.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (9, '학사제도 Pg. 9', '```
 Inspiring Future, Grand Challenge
 
@@ -5137,7 +5137,7 @@ Inspiring Future, Grand Challenge
 2026 | 2. 28.(토) | 겨울계절학기 종료
 
 대학 : 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/9.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (90, '학사제도 Pg. 90', '수강신청/수업 09
 
 ■ 학사과정 계절수업
@@ -5159,7 +5159,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (90, '학
   - 학기별 재학생 및 휴학생(휴학생의 경우, 휴학 중 계절수업 학점취득으로 수료요건을 충족할 수 없으며 학기 이수 후에만 졸업이 허용하며, 휴학생의 계절수업 수강은 졸업학기에는 허용되지 않습니다.)
   - 졸업 직전 학기에 학사모드 하에 계절수업을 수강하는 경우(8월 졸업예정) 또는 겨울(2월 졸업예정) 계절수업을 수강하여 졸업학점을 충족할 수 있습니다.
 
-성균관대학교 83', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/90.jpg');
+성균관대학교 83', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (91, '학사제도 Pg. 91', '```plaintext
 Inspiring Future, Grand Challenge
 
@@ -5199,7 +5199,7 @@ Inspiring Future, Grand Challenge
 84
 
 대학 : 대학생활을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/91.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (92, '학사제도 Pg. 92', '수강신청/수업 09
 
 수업계획서(또는 교과목해설서)란 첨부서의 인정조서 작성 및 제출을 통해 수강과목과 취득학과 성적을 인정합니다. 사전 작성된 예정과목 내역을 근거로 GLS-타대학학점취득과정정산서작성, 메뉴를 통해 인정조서를 제출하면 학과장 및 학장 승인을 통하여 최종 학점 및 성적이 처리됩니다.
@@ -5220,7 +5220,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (92, '학
   - 전공필수(공통전공, DS(Data Science)) 및 교직 학점 인정 불가
   - 반드시 타 대학 수강 종료 후 3개월 이내에 학점인정을 신청하여야 합니다.
 
-성균관대학교 85', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/92.jpg');
+성균관대학교 85', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (93, '학사제도 Pg. 93', 'Sure, here is the transcribed text from the image:
 
 ---
@@ -5258,7 +5258,7 @@ Inspiring Future, Grand Challenge
 
 출처: <대학원생을 위한 2025 학사제도 안내>
 
-86', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/93.jpg');
+86', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (94, '학사제도 Pg. 94', '10. 특별 프로그램
 
 ■ Co-op(현장실습) 프로그램
@@ -5282,7 +5282,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (94, '학
 
 성균관대학교
 
-87', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/94.jpg');
+87', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (95, '학사제도 Pg. 95', 'Inspiring Future, Grand Challenge
 
 - 현장실습 기간
@@ -5308,7 +5308,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (95, '학
 
 88
 
-대학 · 대학원생을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/95.jpg');
+대학 · 대학원생을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (96, '학사제도 Pg. 96', '```plaintext
 특별 프로그램 10
 
@@ -5347,7 +5347,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (96, '학
 
 성균관대학교
 89
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/96.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (97, '학사제도 Pg. 97', '[창업현장실습]
 
 - 신청 시기 및 방법
@@ -5382,7 +5382,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (97, '학
 
 90
 
-대학 : 대학생활을 위한 2025 학사제도 안내', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/97.jpg');
+대학 : 대학생활을 위한 2025 학사제도 안내', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (98, '학사제도 Pg. 98', '```plaintext
 특별 프로그램 10
 
@@ -5441,7 +5441,7 @@ INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (98, '학
 
 성균관대학교
 91
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/98.jpg');
+```', NULL);
 INSERT INTO docs (doc_id, doc_name, doc_content, doc_thumbnail) VALUES (99, '학사제도 Pg. 99', '```
 Inspiring Future, Grand Challenge
 
@@ -5467,4 +5467,4 @@ Inspiring Future, Grand Challenge
 
 92
 대학 · 대학원생을 위한 2025 학사제도 안내
-```', 'https://askku-doc.s3.ap-northeast-2.amazonaws.com/99.jpg');
+```', NULL);

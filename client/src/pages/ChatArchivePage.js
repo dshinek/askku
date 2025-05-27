@@ -1,9 +1,11 @@
-import React, {useState} from "react";
-import {ChevronsDown, MessageCircleMore, Search} from "lucide-react";
-import {AnimatePresence, motion} from "framer-motion";
-import {archiveItems} from "../components/dummyData";
+import React, { useState, useEffect } from "react";
+import { ChevronsDown, MessageCircleMore, Search } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import MainLayout from "../components/layout/MainLayout";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { getChats } from "../utils/api";
+import { useRecoilValue } from "recoil";
+import { sessionIdState } from "../utils/authState";
 
 export default function ChatArchivePage() {
     const navigate = useNavigate();
@@ -13,11 +15,23 @@ export default function ChatArchivePage() {
 
     const [input, setInput] = useState("");    // 입력창 값
     const [search, setSearch] = useState("");  // 실제 검색어(버튼 클릭 시 적용)
+    const [chats, setChats] = useState([]);
+    const sessionId = useRecoilValue(sessionIdState);
+
+    useEffect(() => {
+        if (!sessionId) return;
+        getChats(sessionId)
+            .then(data => setChats(data))
+            .catch(err => {
+                setChats([]);
+                // Optionally handle error (e.g., show a message)
+            });
+    }, [sessionId]);
 
     const trimmedSearch = search.trim();
     const filteredItems = trimmedSearch.length > 0
-        ? archiveItems.filter(item => item.title.toLowerCase().includes(trimmedSearch.toLowerCase()))
-        : archiveItems;
+        ? chats.filter(item => (item.chat_summary || "").toLowerCase().includes(trimmedSearch.toLowerCase()))
+        : chats;
 
     // 페이지네이션
     const startIdx = page * ITEMS_PER_PAGE;
@@ -60,7 +74,7 @@ export default function ChatArchivePage() {
     };
 
     const placeholders = ITEMS_PER_PAGE - currentItems.length > 0
-        ? Array.from({length: ITEMS_PER_PAGE - currentItems.length})
+        ? Array.from({ length: ITEMS_PER_PAGE - currentItems.length })
         : [];
 
     const renderEmpty = () => (
@@ -86,13 +100,13 @@ export default function ChatArchivePage() {
                         value={input}
                         onChange={handleInputChange}
                         onKeyDown={handleInputKeyDown}
-                        style={{minHeight: "40px", maxHeight: "200px", overflow: "auto"}}
+                        style={{ minHeight: "40px", maxHeight: "200px", overflow: "auto" }}
                     />
                     <button
                         type="submit"
                         className="flex items-center justify-center p-2 rounded-full bg-green-600 hover:bg-green-700 transition text-white shadow"
                     >
-                        <Search size={18}/>
+                        <Search size={18} />
                     </button>
                 </form>
                 {/* 아카이브 리스트 */}
@@ -109,24 +123,24 @@ export default function ChatArchivePage() {
                                 initial="enter"
                                 animate="center"
                                 exit="exit"
-                                transition={{duration: 0.48, ease: "easeInOut"}}
+                                transition={{ duration: 0.48, ease: "easeInOut" }}
                                 className="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full"
-                                style={{minHeight: 360}}
+                                style={{ minHeight: 360 }}
                             >
                                 {currentItems.map(item => (
                                     <button
-                                        key={item.id}
-                                        onClick={() => navigate(`/archived-chat/${item.title}`)}
+                                        key={item.chat_id}
+                                        onClick={() => navigate(`/archived-chat/${item.chat_id}`)}
                                         className="group flex items-center gap-3 w-full bg-gray-100 hover:bg-green-50 active:scale-[0.98] rounded-2xl px-5 py-6 text-lg font-semibold text-gray-800 shadow-sm border border-gray-200 hover:border-green-400 transition-all duration-200"
                                         style={{
                                             boxShadow: "0 2px 8px 0 rgba(30,41,59,.05)",
                                         }}
                                     >
-                                    <span
-                                        className="inline-flex items-center justify-center text-green-700 rounded-full w-9 h-9">
-                                        <MessageCircleMore className="w-5 h-5"/>
-                                    </span>
-                                        <span className="text-left break-keep">{item.title}</span>
+                                        <span
+                                            className="inline-flex items-center justify-center text-green-700 rounded-full w-9 h-9">
+                                            <MessageCircleMore className="w-5 h-5" />
+                                        </span>
+                                        <span className="text-left break-keep">{item.chat_summary || "No Title"}</span>
                                     </button>
                                 ))}
                                 {placeholders.map((_, idx) => (
@@ -148,7 +162,7 @@ export default function ChatArchivePage() {
                             className="p-2 rounded-full bg-white border border-gray-200 shadow hover:bg-green-100 transition text-gray-400 hover:text-green-700 focus:outline-none"
                             aria-label="다음 아카이브 보기"
                         >
-                            <ChevronsDown className="w-8 h-8"/>
+                            <ChevronsDown className="w-8 h-8" />
                         </button>
                         <span className="mt-3 text-sm text-gray-400">{page + 1} / {filteredTotalPages}</span>
                     </div>
