@@ -3,3 +3,4 @@
 *.jpg
 *.pyc
 database/*
+client/node_modules/

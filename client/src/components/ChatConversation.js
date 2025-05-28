@@ -2,7 +2,7 @@ import {User, Bot, Send} from "lucide-react";
 import {useRef, useEffect} from "react";
 
 // 공통 대화 UI
-export function ChatConversation({messages, onSendMessage, inputValue, setInputValue, disabled = false}) {
+export function ChatConversation({messages, onSendMessage, inputValue, setInputValue, loading = false, disabled = false}) {
     const scrollRef = useRef(null);
     const inputRef = useRef(null);
 
@@ -30,6 +30,13 @@ export function ChatConversation({messages, onSendMessage, inputValue, setInputV
         }
     };
 
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            onSendMessage();
+        }
+    };
+
     return (
         <div className="h-full bg-gray-100 flex flex-col">
             {/* 대화 내역 */}
@@ -50,6 +57,12 @@ export function ChatConversation({messages, onSendMessage, inputValue, setInputV
                                 content={msg.message}
                             />
                         )}
+                        {loading && (
+                            <div className="flex items-center gap-2 text-gray-500 text-base pl-12 pt-2">
+                                <Bot className="w-5 h-5 text-green-700 animate-bounce" />
+                                <span>답변 생각중...</span>
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
@@ -65,16 +78,17 @@ export function ChatConversation({messages, onSendMessage, inputValue, setInputV
                     <textarea
                         ref={inputRef}
                         rows={1}
-                        className="disabled:placeholder:text-red-400 flex-1 resize-none bg-transparent rounded-xl px-4 py-3 text-base text-gray-900 outline-none border-none focus:ring-0"
+                        className={`flex-1 resize-none bg-transparent rounded-xl px-4 py-3 text-base text-gray-900 outline-none border-none focus:ring-0 ${disabled && !loading ? "placeholder:text-red-400" : ""}`}
                         placeholder={disabled ? "공유된 챗은 메시지를 입력할 수 없습니다." : "메시지를 입력하세요..."}
                         value={inputValue}
-                        disabled={disabled}
+                        disabled={loading || disabled}
                         onChange={handleChange}
+                        onKeyDown={handleKeyDown}
                         style={{minHeight: "40px", maxHeight: "200px", overflow: "auto"}}
                     />
                     <button
                         type="submit"
-                        disabled={!inputValue.trim()}
+                        disabled={!inputValue.trim() || loading || disabled}
                         className="flex items-center justify-center p-2 rounded-full bg-green-600 enabled:hover:bg-green-700 transition text-white shadow disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         <Send size={18}/>

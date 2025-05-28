@@ -190,7 +190,7 @@ export default function ProfilePage() {
                     <div className="flex flex-col items-center mb-8">
                         <AvatarBlock/>
                         <div className="text-xl font-semibold text-gray-900">{form.name}</div>
-                        <div className="text-sm text-gray-500 mt-1">{form.major} · {form.year}</div>
+                        <div className="text-sm text-gray-500 mt-1">{form.major} · {form.year}학년</div>
                     </div>
                     <div className="divide-y divide-gray-100">
                         <InfoRow label="이름" value={profile.name} input={renderValue("name", profile.name)}
