@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {ChevronsDown, FolderOpen, Search} from "lucide-react";
-import {AnimatePresence, motion} from "framer-motion";
+import { ChevronsDown, FolderOpen, Search } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 import MainLayout from "../components/layout/MainLayout";
-import { getDocuments } from "../utils/api";
+import { getDocuments, createChat, createMessage } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 // Helper to get session_id (adjust if you use a different auth system)
 function getSessionId() {
@@ -12,6 +13,8 @@ function getSessionId() {
 export default function DocumentPage() {
     const ITEMS_PER_PAGE = 8;
     const [docs, setDocs] = useState([]);
+    const navigate = useNavigate();
+    const [askLoading, setAskLoading] = useState(false);
     const [input, setInput] = useState("");
     const [search, setSearch] = useState(""); // 실제 적용된 검색어
     const [page, setPage] = useState(0);
@@ -99,13 +102,38 @@ export default function DocumentPage() {
 
     // Modal state for thumbnail popup
     const [selectedDoc, setSelectedDoc] = useState(null);
+    const [thumbnailLoading, setThumbnailLoading] = useState(false);
 
     const handleDocClick = (doc) => {
         setSelectedDoc(doc);
+        setThumbnailLoading(true);
     };
 
     const handleCloseModal = () => {
         setSelectedDoc(null);
+        setThumbnailLoading(false);
+    };
+
+    // Handle "Ask about {document_name}" button click
+    const handleAskAboutDoc = async () => {
+        if (!selectedDoc || askLoading) return;
+        setAskLoading(true);
+        try {
+            const sessionId = getSessionId();
+            // 1. Create a new chat
+            const chatRes = await createChat(sessionId);
+            const chatId = chatRes.chat_id;
+            // 2. Prepare the initial question (do NOT send it here)
+            const question = `${selectedDoc.doc_name} 문서에 대해 설명해줘!`;
+            // 3. Navigate to the chat page, passing the question as state
+            navigate(`/archived-chat/${chatId}`, {
+                state: { initialQuestion: question }
+            });
+        } catch (err) {
+            alert("Failed to start chat about this document.");
+        } finally {
+            setAskLoading(false);
+        }
     };
 
     return (
@@ -128,13 +156,33 @@ export default function DocumentPage() {
                         >
                             ×
                         </button>
-                        <img
-                            src={selectedDoc.doc_thumbnail}
-                            alt="문서 썸네일"
-                            className="max-w-[80vw] max-h-[80vh] rounded-lg border border-gray-200"
-                            style={{ objectFit: "contain" }}
-                        />
-                        <div className="mt-4 text-lg font-semibold text-gray-700">{selectedDoc.doc_name}</div>
+                        <div className="flex flex-col items-center justify-center min-h-[200px] min-w-[200px]">
+                            {thumbnailLoading && (
+                                <div className="flex flex-col items-center justify-center">
+                                    {/* Simple spinner */}
+                                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500 mb-4"></div>
+                                    <span className="text-gray-400">문서 로딩 중...</span>
+                                </div>
+                            )}
+                            <img
+                                src={selectedDoc.doc_thumbnail}
+                                alt="문서 썸네일"
+                                className={`max-w-[80vw] max-h-[80vh] rounded-lg border border-gray-200 transition-opacity duration-300 ${thumbnailLoading ? "opacity-0" : "opacity-100"}`}
+                                style={{ objectFit: "contain" }}
+                                onLoad={() => setThumbnailLoading(false)}
+                                onError={() => setThumbnailLoading(false)}
+                                draggable={false}
+                            />
+                        </div>
+                        <button
+                            className="mt-4 px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold text-lg transition disabled:opacity-60"
+                            onClick={handleAskAboutDoc}
+                            disabled={askLoading}
+                        >
+                            {askLoading
+                                ? "Starting chat..."
+                                : `Ask about ${selectedDoc.doc_name}`}
+                        </button>
                     </div>
                 </div>
             )}

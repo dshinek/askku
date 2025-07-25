@@ -33,7 +33,7 @@ def login(user: schema.UserLogin, db: Session = Depends(get_db)):
 
 @router.get("/profile/me")
 def get_my_profile(db: Session = Depends(get_db), user_id=Depends(check_authentication_header)):
-    db_user = crud.get_user_by_id_(db, user_id)
+    db_user = crud.get_user_by_id(db, user_id)
     if not db_user:
         raise HTTPException(status_code=404, detail="User not found")
     return {

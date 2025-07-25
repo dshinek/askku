@@ -114,12 +114,12 @@ export const signIn = async (email, password) => {
 
 // Update authenticated user's profile
 export const updateMyProfile = async (profile, sessionId) => {
-    // Map frontend fields to backend schema
+    // Send all fields required by the backend schema
     const data = {
         name: profile.name,
         student_id: profile.studentId,
         department: profile.major,
-        grade: profile.year,
+        grade: parseInt(profile.year, 10),
     };
     try {
         const response = await api.put('/users/profile/me', data, {

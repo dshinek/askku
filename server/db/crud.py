@@ -22,18 +22,17 @@ def create_user(db: Session, user: schema.UserCreate) -> Optional[models.User]:
         db.rollback()
         return None
 
-def get_user_by_id(db: Session, user_id: str) -> Optional[models.User]:
+def get_user_by_email(db: Session, user_id: str) -> Optional[models.User]:
     return db.query(models.User).filter(models.User.user_id == user_id).first()
 
-def get_user_by_id_(db: Session, user_id: int) -> Optional[models.User]:
+def get_user_by_id(db: Session, user_id: int) -> Optional[models.User]:
     return db.query(models.User).filter(models.User.id == user_id).first()
-from typing import Optional
 
 def get_user_by_student_id(db: Session, student_id: str) -> Optional[models.User]:
     return db.query(models.User).filter(models.User.student_id == student_id).first()
 
 def authenticate_user(db: Session, user_id: str, user_pw: str) -> Optional[models.User]:
-    user = get_user_by_id(db, user_id)
+    user = get_user_by_email(db, user_id)
     if user and user.user_pw == user_pw:  # In production, use hashed password check!
         return user
 
@@ -41,13 +40,13 @@ def get_doc(db: Session, doc_id: int) -> Optional[models.Doc]:
     return db.query(models.Doc).filter(models.Doc.doc_id == doc_id).first()
 
 def get_docs(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(models.Doc).offset(skip).limit(limit).all()
+    return db.query(models.Doc).order_by(models.Doc.doc_id).offset(skip).limit(limit).all()
 
 def search_docs(db: Session, keyword: str):
     return db.query(models.Doc).filter(models.Doc.doc_name.ilike(f"%{keyword}%")).all()
 
 def update_user_profile(db: Session, user_id: str, profile: schema.UserBase) -> Optional[models.User]:
-    user = get_user_by_id_(db, user_id)
+    user = get_user_by_id(db, user_id)
     if not user:
         return None
     user.name = profile.name
@@ -63,7 +62,7 @@ def create_chat(db: Session, user_id) -> models.Chat:
     db_chat = models.Chat(
         chat_summary="",
         user_id=user_id,
-        is_shared=False
+        is_shared=True,
     )
     db.add(db_chat)
     db.commit()
@@ -110,3 +109,15 @@ def update_chat_summary(db: Session, chat_id: int, summary: str) -> Optional[mod
     db.commit()
     db.refresh(chat)
     return chat
+
+def update_chat_share_status(db: Session, chat_id: int, is_shared: bool) -> Optional[models.Chat]:
+    chat = get_chat(db, chat_id)
+    if not chat:
+        return None
+    chat.is_shared = is_shared
+    db.commit()
+    db.refresh(chat)
+    return chat
+
+def doc_content_by_name(db: Session, doc_name: str) -> Optional[models.Doc]:
+    return db.query(models.Doc).filter(models.Doc.doc_name == doc_name).first()
