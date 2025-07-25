@@ -4,6 +4,20 @@ from routers import auth, chat, document
 
 app = FastAPI()
 
+import time
+from fastapi import Request
+
+@app.middleware("http")
+async def log_request_time(request: Request, call_next):
+    start_time = time.perf_counter()
+    response = await call_next(request)
+    end_time = time.perf_counter()
+    elapsed = end_time - start_time
+    log_line = f"[PROFILE] {request.method} {request.url.path} took {elapsed:.4f} seconds\n"
+    with open("profile_log.txt", "a") as f:
+        f.write(log_line)
+    return response
+
 # CORS settings (adjust origins as needed)
 app.add_middleware(
     CORSMiddleware,

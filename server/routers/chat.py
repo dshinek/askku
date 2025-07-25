@@ -4,7 +4,7 @@ from db import schema, crud, database
 from typing import List, Optional
 from db.database import get_db
 from dependencies.session_auth import check_authentication_header
-from utils.llm_response import answer, chat_summary
+from utils.llm_response import answer, chat_summary, answer_with_reference
 
 router = APIRouter(
     prefix="/api/chats",
@@ -65,14 +65,36 @@ def create_message(chat_id: int, message: schema.MessageCreate, db: Session = De
     chat = crud.get_chat(db, chat_id)
     if not chat:
         raise HTTPException(status_code=404, detail="Chat not found")
-    # Store user message, always as "Human"
-    db_message = crud.create_message(db, message, chat_id, src_type="Human")
-    # Call LLM to get response
-    llm_response = answer(message.content)
-    summary = chat_summary(message.content+message.content)
-    # Update chat summary
+    
+    # 1. Retrieve all previous messages for this chat, ordered by message_id
+    messages = crud.get_messages_by_chat(db, chat_id)
+    messages = sorted(messages, key=lambda m: m.message_id)
+    
+    # 2. Concatenate previous messages with role prefix
+    conversation_log = ""
+    for m in messages:
+        role = "Human" if m.source == "Human" else "AI"
+        conversation_log += f"{role}: {m.content}\n"
+    # 3. Add the new user message
+    conversation_log += f"Human: {message.content}\n"
+
+    # 4. Store user message, always as "Human"
+    crud.create_message(db, message, chat_id, src_type="Human")
+
+    # 5. Handle special case for document explanation
+    if "문서에 대해 설명해줘!" in message.content:
+        doc_content = crud.doc_content_by_name(db, message.content.replace("문서에 대해 설명해줘!", "").strip())
+        llm_response = answer_with_reference(doc_content.doc_content + "\n"\
+                                             + message.content + "\n최대한 자세히 요약해주고, 문서와 관련하여 나올 수 있는 질문을 3개 \
+                                                만들어서 제시해줘 답까지 제시하진 말고 질문만 제시해줘 너무 인위적으로 요약 부분, 질문 제시 부분을 나누진 마")
+    else:
+        # 6. Send the concatenated conversation log to the GPT API
+        llm_response,relative_doc_list = answer(conversation_log)
+
+    # 7. Update chat summary
+    summary = chat_summary(conversation_log)
     crud.update_chat_summary(db, chat_id, summary)
-    # Store LLM response as a new message, always as "AI"
+    # 8. Store LLM response as a new message, always as "AI"
     ai_message = schema.MessageCreate(
         content=llm_response,
         ref_doc_id=None
