@@ -7,7 +7,7 @@ import redis
 import uuid
 from dependencies.session_auth import check_authentication_header
 
-rd = redis.Redis(host="127.0.0.1", port=int("6380"), db=0)
+rd = redis.Redis(host="127.0.0.1", port=int("6379"), db=0)
 
 router = APIRouter(
     prefix="/api/users",

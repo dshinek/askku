@@ -4,7 +4,7 @@ import os
 import redis
 
 CACHE_SERVER_HOST = "localhost"
-CACHE_SERVER_PORT = "6380"
+CACHE_SERVER_PORT = "6379"
 
 rd = redis.Redis(host=CACHE_SERVER_HOST, port=int(CACHE_SERVER_PORT), db=0)
 
